@@ -1,6 +1,6 @@
 
 import React from "react";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import { Menu } from "lucide-react";
 import {
   Sheet,
@@ -12,22 +12,22 @@ export default function FloatNavBar() {
   return (
     <nav className="bg-black border-b border-gray-800 text-white p-4">
       <div className="container mx-auto flex items-center justify-between">
-        <Link href="/" className="font-mono font-bold text-xl">
+        <Link to="/" className="font-mono font-bold text-xl">
           FLOAT.
           <span className="text-sigil-accent">DISPATCH</span>
         </Link>
         
         <div className="hidden md:flex space-x-6 font-mono text-sm">
-          <Link href="/imprints/techcraft" className="text-techcraft-accent hover:underline">
+          <Link to="/imprints/techcraft" className="text-techcraft-accent hover:underline">
             TECHCRAFT
           </Link>
-          <Link href="/imprints/sigil-studies" className="text-sigil-accent hover:underline">
+          <Link to="/imprints/sigil-studies" className="text-sigil-accent hover:underline">
             SIGIL STUDIES
           </Link>
-          <Link href="/imprints/activate" className="text-activate-accent hover:underline">
+          <Link to="/imprints/activate" className="text-activate-accent hover:underline">
             ACTIVATE
           </Link>
-          <Link href="/imprints/interface-poetics" className="text-interface-accent hover:underline">
+          <Link to="/imprints/interface-poetics" className="text-interface-accent hover:underline">
             INTERFACE POETICS
           </Link>
         </div>
@@ -38,29 +38,29 @@ export default function FloatNavBar() {
           </SheetTrigger>
           <SheetContent side="right" className="bg-black text-white border-l border-gray-800 p-0">
             <div className="flex flex-col gap-4 p-6">
-              <Link href="/" className="font-mono font-bold text-xl">
+              <Link to="/" className="font-mono font-bold text-xl">
                 FLOAT.
                 <span className="text-sigil-accent">DISPATCH</span>
               </Link>
               
               <div className="flex flex-col space-y-4 font-mono">
-                <Link href="/imprints/techcraft" className="text-techcraft-accent hover:underline p-2 border-l border-techcraft-border">
+                <Link to="/imprints/techcraft" className="text-techcraft-accent hover:underline p-2 border-l border-techcraft-border">
                   TECHCRAFT
                 </Link>
-                <Link href="/imprints/sigil-studies" className="text-sigil-accent hover:underline p-2 border-l border-sigil-border">
+                <Link to="/imprints/sigil-studies" className="text-sigil-accent hover:underline p-2 border-l border-sigil-border">
                   SIGIL STUDIES
                 </Link>
-                <Link href="/imprints/activate" className="text-activate-accent hover:underline p-2 border-l border-activate-border">
+                <Link to="/imprints/activate" className="text-activate-accent hover:underline p-2 border-l border-activate-border">
                   ACTIVATE
                 </Link>
-                <Link href="/imprints/interface-poetics" className="text-interface-accent hover:underline p-2 border-l border-interface-border">
+                <Link to="/imprints/interface-poetics" className="text-interface-accent hover:underline p-2 border-l border-interface-border">
                   INTERFACE POETICS
                 </Link>
                 
                 <div className="pt-4 mt-4 border-t border-gray-800">
-                  <Link href="/about" className="block p-2 hover:bg-white/5">About</Link>
-                  <Link href="/subscribe" className="block p-2 hover:bg-white/5">Subscribe</Link>
-                  <Link href="/contact" className="block p-2 hover:bg-white/5">Contact</Link>
+                  <Link to="/about" className="block p-2 hover:bg-white/5">About</Link>
+                  <Link to="/subscribe" className="block p-2 hover:bg-white/5">Subscribe</Link>
+                  <Link to="/contact" className="block p-2 hover:bg-white/5">Contact</Link>
                 </div>
               </div>
               

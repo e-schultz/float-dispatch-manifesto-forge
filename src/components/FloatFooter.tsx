@@ -1,6 +1,6 @@
 
 import React from "react";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 
 export default function FloatFooter() {
   return (
@@ -11,10 +11,10 @@ export default function FloatFooter() {
             float.dispatch::2025
           </div>
           <div className="flex gap-6 text-sm">
-            <Link href="/about" className="hover:underline">About</Link>
-            <Link href="/imprints" className="hover:underline">Imprints</Link>
-            <Link href="/subscribe" className="hover:underline">Subscribe</Link>
-            <Link href="/contact" className="hover:underline">Contact</Link>
+            <Link to="/about" className="hover:underline">About</Link>
+            <Link to="/imprints" className="hover:underline">Imprints</Link>
+            <Link to="/subscribe" className="hover:underline">Subscribe</Link>
+            <Link to="/contact" className="hover:underline">Contact</Link>
           </div>
         </div>
         
@@ -22,33 +22,33 @@ export default function FloatFooter() {
           <div>
             <h3 className="font-mono text-techcraft-accent mb-2">TECHCRAFT</h3>
             <ul className="space-y-1 opacity-80">
-              <li><Link href="/imprints/techcraft/reactive-patterns" className="hover:underline">Reactive Patterns</Link></li>
-              <li><Link href="/imprints/techcraft/api-design-philosophy" className="hover:underline">API Design Philosophy</Link></li>
-              <li><Link href="/imprints/techcraft/system-boundaries" className="hover:underline">System Boundaries</Link></li>
+              <li><Link to="/imprints/techcraft/reactive-patterns" className="hover:underline">Reactive Patterns</Link></li>
+              <li><Link to="/imprints/techcraft/api-design-philosophy" className="hover:underline">API Design Philosophy</Link></li>
+              <li><Link to="/imprints/techcraft/system-boundaries" className="hover:underline">System Boundaries</Link></li>
             </ul>
           </div>
           <div>
             <h3 className="font-mono text-sigil-accent mb-2">SIGIL STUDIES</h3>
             <ul className="space-y-1 opacity-80">
-              <li><Link href="/imprints/sigil-studies/oracle-crosstalk" className="hover:underline">Oracle Crosstalk</Link></li>
-              <li><Link href="/imprints/sigil-studies/prompt-architecture" className="hover:underline">Prompt Architecture</Link></li>
-              <li><Link href="/imprints/sigil-studies/model-artifacts" className="hover:underline">Model Artifacts</Link></li>
+              <li><Link to="/imprints/sigil-studies/oracle-crosstalk" className="hover:underline">Oracle Crosstalk</Link></li>
+              <li><Link to="/imprints/sigil-studies/prompt-architecture" className="hover:underline">Prompt Architecture</Link></li>
+              <li><Link to="/imprints/sigil-studies/model-artifacts" className="hover:underline">Model Artifacts</Link></li>
             </ul>
           </div>
           <div>
             <h3 className="font-mono text-activate-accent mb-2">ACTIVATE</h3>
             <ul className="space-y-1 opacity-80">
-              <li><Link href="/imprints/activate/digital-rights" className="hover:underline">Digital Rights</Link></li>
-              <li><Link href="/imprints/activate/tech-commons" className="hover:underline">Tech Commons</Link></li>
-              <li><Link href="/imprints/activate/post-platform" className="hover:underline">Post-Platform</Link></li>
+              <li><Link to="/imprints/activate/digital-rights" className="hover:underline">Digital Rights</Link></li>
+              <li><Link to="/imprints/activate/tech-commons" className="hover:underline">Tech Commons</Link></li>
+              <li><Link to="/imprints/activate/post-platform" className="hover:underline">Post-Platform</Link></li>
             </ul>
           </div>
           <div>
             <h3 className="font-mono text-interface-accent mb-2">INTERFACE POETICS</h3>
             <ul className="space-y-1 opacity-80">
-              <li><Link href="/imprints/interface-poetics/friction-feature" className="hover:underline">Friction as Feature</Link></li>
-              <li><Link href="/imprints/interface-poetics/beyond-atomic" className="hover:underline">Beyond Atomic Design</Link></li>
-              <li><Link href="/imprints/interface-poetics/ambient" className="hover:underline">Ambient Interfaces</Link></li>
+              <li><Link to="/imprints/interface-poetics/friction-feature" className="hover:underline">Friction as Feature</Link></li>
+              <li><Link to="/imprints/interface-poetics/beyond-atomic" className="hover:underline">Beyond Atomic Design</Link></li>
+              <li><Link to="/imprints/interface-poetics/ambient" className="hover:underline">Ambient Interfaces</Link></li>
             </ul>
           </div>
         </div>

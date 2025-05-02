@@ -1,7 +1,7 @@
 
 import React from "react";
+import { Link } from "react-router-dom";
 import { Grid3X3, BookOpen, ArrowRight } from 'lucide-react';
-import Link from "next/link";
 import DispatchCard from "../components/DispatchCard";
 import FloatNavBar from "../components/FloatNavBar";
 import FloatFooter from "../components/FloatFooter";
@@ -25,14 +25,14 @@ const Index = () => {
             </p>
             <div className="flex flex-wrap gap-4">
               <Link 
-                href="/imprints" 
+                to="/imprints" 
                 className="inline-flex items-center gap-2 bg-white text-black px-4 py-2 rounded-md hover:bg-gray-200 transition-colors"
               >
                 <BookOpen className="h-4 w-4" />
                 <span>Browse Imprints</span>
               </Link>
               <Link 
-                href="/about" 
+                to="/about" 
                 className="inline-flex items-center gap-2 border border-white px-4 py-2 rounded-md hover:bg-white/10 transition-colors"
               >
                 <span>About FLOAT.dispatch</span>
@@ -66,7 +66,7 @@ const Index = () => {
           <div className="flex items-center justify-between mb-8">
             <h2 className="text-2xl font-bold font-mono">Recent Dispatches</h2>
             <Link 
-              href="/dispatches" 
+              to="/dispatches" 
               className="inline-flex items-center gap-1 text-sm hover:underline"
             >
               <span>View All</span>

@@ -1,6 +1,6 @@
 
 import React from "react";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import { Calendar, Tag } from 'lucide-react';
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 
@@ -65,7 +65,7 @@ export default function DispatchCard({
   };
   
   return (
-    <Link href={`/imprints/${imprint}/${slug}`}>
+    <Link to={`/imprints/${imprint}/${slug}`}>
       <Card className={`${styles.bg} text-white border ${styles.border} transition-all ${styles.hover}`}>
         <CardHeader className="pb-2">
           <div className={`text-xs font-mono ${styles.accent} mb-2`}>

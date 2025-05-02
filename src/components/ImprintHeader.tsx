@@ -1,7 +1,7 @@
 
-import React from "react"
-import Link from "next/link"
-import { ChevronRight } from 'lucide-react'
+import React from "react";
+import { Link } from "react-router-dom";
+import { ChevronRight } from 'lucide-react';
 
 interface ImprintHeaderProps {
   imprint: "techcraft" | "sigil-studies" | "activate" | "interface-poetics";
@@ -59,9 +59,9 @@ export default function ImprintHeader({
     <header className={`${styles.bg} text-white w-full py-8 border-b ${styles.border}`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center gap-2 text-sm mb-2 font-mono">
-          <Link href="/" className="hover:underline">float.dispatch</Link>
+          <Link to="/" className="hover:underline">float.dispatch</Link>
           <ChevronRight className="h-3 w-3" />
-          <Link href={`/imprints/${imprint}`} className={`${styles.text} hover:underline`}>
+          <Link to={`/imprints/${imprint}`} className={`${styles.text} hover:underline`}>
             {formatImprintName(imprint)}
           </Link>
           {issueNumber && (
