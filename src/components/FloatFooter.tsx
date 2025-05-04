@@ -18,7 +18,7 @@ export default function FloatFooter() {
           </div>
         </div>
         
-        <div className="mt-8 pt-6 border-t border-gray-800 grid md:grid-cols-4 gap-6 text-sm">
+        <div className="mt-8 pt-6 border-t border-gray-800 grid md:grid-cols-5 gap-6 text-sm">
           <div>
             <h3 className="font-mono text-techcraft-accent mb-2">TECHCRAFT</h3>
             <ul className="space-y-1 opacity-80">
@@ -33,6 +33,12 @@ export default function FloatFooter() {
               <li><Link to="/imprints/sigil-studies/oracle-crosstalk" className="hover:underline">Oracle Crosstalk</Link></li>
               <li><Link to="/imprints/sigil-studies/prompt-architecture" className="hover:underline">Prompt Architecture</Link></li>
               <li><Link to="/imprints/sigil-studies/model-artifacts" className="hover:underline">Model Artifacts</Link></li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="font-mono text-purple-400 mb-2">SPA</h3>
+            <ul className="space-y-1 opacity-80">
+              <li><Link to="/imprints/spa/systems-thinking" className="hover:underline">Systems Thinking</Link></li>
             </ul>
           </div>
           <div>

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { ChevronRight } from 'lucide-react';
 
 interface ImprintHeaderProps {
-  imprint: "techcraft" | "sigil-studies" | "activate" | "interface-poetics";
+  imprint: "techcraft" | "sigil-studies" | "activate" | "interface-poetics" | "spa";
   title: string;
   subtitle?: string;
   issueNumber?: number;
@@ -39,6 +39,11 @@ export default function ImprintHeader({
       bg: "bg-black",
       text: "text-interface-accent",
       border: "border-interface-border"
+    },
+    "spa": {
+      bg: "bg-black",
+      text: "text-purple-400",
+      border: "border-purple-900"
     }
   };
   
@@ -51,6 +56,7 @@ export default function ImprintHeader({
       case "sigil-studies": return "SIGIL STUDIES";
       case "activate": return "ACTIVATE";
       case "interface-poetics": return "INTERFACE POETICS";
+      case "spa": return "SPA";
       default: return name.toUpperCase();
     }
   };

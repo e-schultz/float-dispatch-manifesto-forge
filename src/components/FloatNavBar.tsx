@@ -24,6 +24,9 @@ export default function FloatNavBar() {
           <Link to="/imprints/sigil-studies" className="text-sigil-accent hover:underline">
             SIGIL STUDIES
           </Link>
+          <Link to="/imprints/spa" className="text-purple-400 hover:underline">
+            SPA
+          </Link>
           <Link to="/imprints/activate" className="text-activate-accent hover:underline">
             ACTIVATE
           </Link>
@@ -49,6 +52,9 @@ export default function FloatNavBar() {
                 </Link>
                 <Link to="/imprints/sigil-studies" className="text-sigil-accent hover:underline p-2 border-l border-sigil-border">
                   SIGIL STUDIES
+                </Link>
+                <Link to="/imprints/spa" className="text-purple-400 hover:underline p-2 border-l border-purple-900">
+                  SPA
                 </Link>
                 <Link to="/imprints/activate" className="text-activate-accent hover:underline p-2 border-l border-activate-border">
                   ACTIVATE

@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { Calendar, Tag } from 'lucide-react';
@@ -8,7 +7,7 @@ interface DispatchCardProps {
   title: string;
   description: string;
   date: string;
-  imprint: "techcraft" | "sigil-studies" | "activate" | "interface-poetics";
+  imprint: "techcraft" | "sigil-studies" | "activate" | "interface-poetics" | "spa";
   slug: string;
   tags?: string[];
   size?: string;
@@ -48,10 +47,14 @@ export default function DispatchCard({
       border: "border-interface-border",
       accent: "text-interface-accent",
       hover: "hover:border-interface-accent/70"
+    },
+    "spa": {
+      bg: "bg-black/90",
+      border: "border-purple-900",
+      accent: "text-purple-400",
+      hover: "hover:border-purple-400/70"
     }
   };
-  
-  const styles = imprintStyles[imprint];
   
   // Format imprint name for display
   const formatImprintName = (name: string) => {
@@ -60,15 +63,16 @@ export default function DispatchCard({
       case "sigil-studies": return "SIGIL STUDIES";
       case "activate": return "ACTIVATE";
       case "interface-poetics": return "INTERFACE POETICS";
+      case "spa": return "SPA";
       default: return name.toUpperCase();
     }
   };
   
   return (
     <Link to={`/imprints/${imprint}/${slug}`}>
-      <Card className={`${styles.bg} text-white border ${styles.border} transition-all ${styles.hover}`}>
+      <Card className={`${imprintStyles[imprint].bg} text-white border ${imprintStyles[imprint].border} transition-all ${imprintStyles[imprint].hover}`}>
         <CardHeader className="pb-2">
-          <div className={`text-xs font-mono ${styles.accent} mb-2`}>
+          <div className={`text-xs font-mono ${imprintStyles[imprint].accent} mb-2`}>
             {formatImprintName(imprint)}
           </div>
           <h3 className="text-xl font-bold font-mono">{title}</h3>

@@ -40,18 +40,24 @@ const Index = () => {
               </Link>
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-3 gap-4">
             <div className="aspect-square bg-techcraft-DEFAULT border border-techcraft-border rounded-md flex items-center justify-center">
-              <span className="text-techcraft-accent font-mono text-xl">TECHCRAFT</span>
+              <span className="text-techcraft-accent font-mono text-xl">TECH</span>
             </div>
             <div className="aspect-square bg-black border border-sigil-border rounded-md flex items-center justify-center">
-              <span className="text-sigil-accent font-mono text-xl">SIGIL STUDIES</span>
+              <span className="text-sigil-accent font-mono text-xl">SIGIL</span>
+            </div>
+            <div className="aspect-square bg-black border border-purple-900 rounded-md flex items-center justify-center">
+              <span className="text-purple-400 font-mono text-xl">SPA</span>
             </div>
             <div className="aspect-square bg-black border border-activate-border rounded-md flex items-center justify-center">
               <span className="text-activate-accent font-mono text-xl">ACTIVATE</span>
             </div>
             <div className="aspect-square bg-black border border-interface-border rounded-md flex items-center justify-center">
-              <span className="text-interface-accent font-mono text-xl">INTERFACE POETICS</span>
+              <span className="text-interface-accent font-mono text-xl">INTERFACE</span>
+            </div>
+            <div className="aspect-square bg-black border border-gray-800 rounded-md flex items-center justify-center">
+              <span className="text-white font-mono text-xl opacity-50">FLOAT</span>
             </div>
           </div>
         </div>
@@ -76,6 +82,16 @@ const Index = () => {
           
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             <DispatchCard
+              title="Systems Thinking for the Soul"
+              description="How to Build Content (and Life) That Doesn't Collapse. A ritual shack × systems bard × recursive case study."
+              date="2025-05-04"
+              imprint="spa"
+              slug="systems-thinking"
+              tags={["systems", "patterns", "ritual"]}
+              size="45kb"
+            />
+            
+            <DispatchCard
               title="Oracle Crosstalk: Slutprint Leaks"
               description="Exploring the resonance patterns that emerge when prompting across multiple AI models. What echoes spill from cross-model prompting?"
               date="2025-05-02"
@@ -94,16 +110,6 @@ const Index = () => {
               tags={["development", "architecture", "patterns"]}
               size="38kb"
             />
-            
-            <DispatchCard
-              title="FLOAT vs AI Gaslighting"
-              description="A deep exploration of how OpenAI's 'management cosplay' update violated core principles of trust and authentic interaction."
-              date="2025-05-01"
-              imprint="activate"
-              slug="float-vs-ai-gaslighting"
-              tags={["ai-ethics", "trust", "system-integrity"]}
-              size="25kb"
-            />
           </div>
         </div>
       </section>
@@ -116,7 +122,7 @@ const Index = () => {
             <h2 className="text-2xl font-bold font-mono">Imprints</h2>
           </div>
           
-          <div className="grid gap-8 md:grid-cols-2">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             <div className="border border-techcraft-border rounded-md p-6 bg-techcraft-DEFAULT/50">
               <h3 className="text-xl font-bold text-techcraft-accent mb-2 font-mono">TECHCRAFT</h3>
               <p className="text-sm opacity-90 mb-4">
@@ -134,6 +140,16 @@ const Index = () => {
               </p>
               <div className="text-xs font-mono opacity-70">
                 ai • prompts • divination • ritual
+              </div>
+            </div>
+            
+            <div className="border border-purple-900 rounded-md p-6 bg-black">
+              <h3 className="text-xl font-bold text-purple-400 mb-2 font-mono">SPA</h3>
+              <p className="text-sm opacity-90 mb-4">
+                Systems thinking, personal growth, cognitive approaches to complexity, and ritual infrastructure.
+              </p>
+              <div className="text-xs font-mono opacity-70">
+                systems • patterns • cognition • ritual
               </div>
             </div>
             
