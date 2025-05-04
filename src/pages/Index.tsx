@@ -92,23 +92,23 @@ const Index = () => {
             />
             
             <DispatchCard
+              title="Better as a T-Shirt Rule"
+              description="Symbolic compression for decision-making. How to distill complex ideas into actionable, memorable forms."
+              date="2025-05-03"
+              imprint="spa"
+              slug="tshirt-rule"
+              tags={["rituals", "systems", "knowledge"]}
+              size="38kb"
+            />
+            
+            <DispatchCard
               title="Oracle Crosstalk: Slutprint Leaks"
               description="Exploring the resonance patterns that emerge when prompting across multiple AI models. What echoes spill from cross-model prompting?"
               date="2025-05-02"
               imprint="sigil-studies"
-              slug="oracle-crosstalk-slutprint-leaks"
+              slug="oracle-crosstalk"
               tags={["ai", "prompts", "ritual"]}
               size="42kb"
-            />
-            
-            <DispatchCard
-              title="Reactive Patterns: Beyond the Framework"
-              description="We become so immersed in framework-thinking that we forget to see the underlying patterns. React isn't special because it's React."
-              date="2025-05-02"
-              imprint="techcraft"
-              slug="reactive-patterns-beyond-framework"
-              tags={["development", "architecture", "patterns"]}
-              size="38kb"
             />
           </div>
         </div>

@@ -123,6 +123,7 @@ const ImprintsPage = () => {
                 <h3 className="text-sm font-mono mb-2 text-purple-400">SAMPLE DISPATCHES</h3>
                 <ul className="space-y-2 text-sm">
                   <li className="opacity-80 hover:opacity-100">float.dispatch::2025-05-04_systems-thinking-for-the-soul</li>
+                  <li className="opacity-80 hover:opacity-100">float.dispatch::2025-05-03_better-as-a-tshirt-rule</li>
                 </ul>
               </div>
             </Link>

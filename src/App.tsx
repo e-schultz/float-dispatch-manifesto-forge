@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import OracleCrossTalkPage from "./pages/imprints/sigil-studies/oracle-crosstalk";
 import SystemsThinkingPage from "./pages/imprints/spa/systems-thinking";
+import TshirtRulePage from "./pages/imprints/spa/tshirt-rule";
 import ImprintsPage from "./pages/imprints";
 import AboutPage from "./pages/about";
 import SubscribePage from "./pages/subscribe";
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/imprints" element={<ImprintsPage />} />
           <Route path="/imprints/sigil-studies/oracle-crosstalk" element={<OracleCrossTalkPage />} />
           <Route path="/imprints/spa/systems-thinking" element={<SystemsThinkingPage />} />
+          <Route path="/imprints/spa/tshirt-rule" element={<TshirtRulePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/subscribe" element={<SubscribePage />} />
           <Route path="/contact" element={<ContactPage />} />
