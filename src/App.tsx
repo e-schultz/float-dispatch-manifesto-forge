@@ -11,6 +11,7 @@ import SystemsThinkingPage from "./pages/imprints/spa/systems-thinking";
 import TshirtRulePage from "./pages/imprints/spa/tshirt-rule";
 import ContinuityBridgesPage from "./pages/imprints/sigil-studies/continuity-bridges";
 import ImprintsPage from "./pages/imprints";
+import SigilStudiesImprintPage from "./pages/imprints/sigil-studies";
 import AboutPage from "./pages/about";
 import SubscribePage from "./pages/subscribe";
 import ContactPage from "./pages/contact";
@@ -28,6 +29,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/imprints" element={<ImprintsPage />} />
+          <Route path="/imprints/sigil-studies" element={<SigilStudiesImprintPage />} />
           <Route path="/imprints/sigil-studies/oracle-crosstalk" element={<OracleCrossTalkPage />} />
           <Route path="/imprints/sigil-studies/continuity-bridges" element={<ContinuityBridgesPage />} />
           <Route path="/imprints/spa/systems-thinking" element={<SystemsThinkingPage />} />
