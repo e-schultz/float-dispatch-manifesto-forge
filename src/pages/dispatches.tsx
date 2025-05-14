@@ -27,6 +27,16 @@ const DispatchesPage = () => {
         
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           <DispatchCard
+            title="Continuity Bridges"
+            description="Ritual infrastructure for bridging conversational context across multiple cognitive states and sessions."
+            date="2025-05-14"
+            imprint="sigil-studies"
+            slug="continuity-bridges"
+            tags={["context", "ritual", "float"]}
+            size="36kb"
+          />
+        
+          <DispatchCard
             title="Systems Thinking for the Soul"
             description="How to Build Content (and Life) That Doesn't Collapse. A ritual shack × systems bard × recursive case study."
             date="2025-05-04"
@@ -34,6 +44,16 @@ const DispatchesPage = () => {
             slug="systems-thinking"
             tags={["systems", "patterns", "ritual"]}
             size="45kb"
+          />
+          
+          <DispatchCard
+            title="Better as a T-Shirt Rule"
+            description="Symbolic compression for decision-making. How to distill complex ideas into actionable, memorable forms."
+            date="2025-05-03"
+            imprint="spa"
+            slug="tshirt-rule"
+            tags={["rituals", "systems", "knowledge"]}
+            size="38kb"
           />
           
           <DispatchCard

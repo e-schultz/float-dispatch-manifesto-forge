@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { Grid3X3 } from 'lucide-react';
@@ -59,9 +58,9 @@ const ImprintsPage = () => {
                 
                 <h3 className="text-sm font-mono mb-2 text-sigil-accent">SAMPLE DISPATCHES</h3>
                 <ul className="space-y-2 text-sm">
+                  <li className="opacity-80 hover:opacity-100">float.dispatch::2025-05-14_continuity-bridges</li>
                   <li className="opacity-80 hover:opacity-100">float.dispatch::2025-05-02_oracle-crosstalk-slutprints</li>
                   <li className="opacity-80 hover:opacity-100">float.dispatch::2025-04-10_prompt-architecture</li>
-                  <li className="opacity-80 hover:opacity-100">float.dispatch::2025-04-22_model-artifacts</li>
                 </ul>
               </div>
             </Link>
