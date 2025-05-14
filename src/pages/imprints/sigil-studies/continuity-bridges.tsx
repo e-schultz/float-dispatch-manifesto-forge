@@ -3,7 +3,7 @@ import React from "react";
 import ImprintHeader from "@/components/ImprintHeader";
 import FloatNavBar from "@/components/FloatNavBar";
 import FloatFooter from "@/components/FloatFooter";
-import { CalendarIcon, Tag } from "lucide-react";
+import { CalendarIcon, Tag, Code, Layers } from "lucide-react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
@@ -242,6 +242,303 @@ const ContinuityBridgesPage = () => {
             <div className="mt-8">
               <p className="italic text-sm opacity-80">
                 "Trust the drift, defer the scaffold. Anchor what's real, not what's ideal."
+              </p>
+            </div>
+          </section>
+          
+          <Separator className="my-12 border-sigil-border" />
+          
+          {/* New section for FLOAT Dispatch React Implementation */}
+          <section className="space-y-6">
+            <h2 className="text-2xl font-mono text-sigil-accent flex items-center gap-2">
+              <Code className="h-6 w-6" />
+              FLOAT Dispatch React Implementation
+            </h2>
+            
+            <div className="flex items-center gap-2 text-sm opacity-70 font-mono">
+              <span className="text-sigil-accent">uid:</span>
+              <span>float::dispatch::20250514::float_dispatch_react_implementation</span>
+            </div>
+            
+            <div className="flex flex-wrap gap-2">
+              <span className="px-2 py-1 bg-sigil-border/50 text-sigil-accent rounded-full text-xs">🏥📝</span>
+              <span className="px-2 py-1 bg-sigil-border/50 text-sigil-accent rounded-full text-xs">{"{∴}"}</span>
+              <span className="px-2 py-1 bg-sigil-border/50 text-sigil-accent rounded-full text-xs">{"{⊡}"}</span>
+              <span className="px-2 py-1 bg-gray-800 text-gray-300 rounded-full text-xs">#float</span>
+              <span className="px-2 py-1 bg-gray-800 text-gray-300 rounded-full text-xs">#technical-implementation</span>
+              <span className="px-2 py-1 bg-gray-800 text-gray-300 rounded-full text-xs">#jane_app</span>
+              <span className="px-2 py-1 bg-gray-800 text-gray-300 rounded-full text-xs">#schema-driven-ui</span>
+              <span className="px-2 py-1 bg-gray-800 text-gray-300 rounded-full text-xs">#component-architecture</span>
+              <span className="px-2 py-1 bg-gray-800 text-gray-300 rounded-full text-xs">#metaphor-bridge</span>
+            </div>
+            
+            <div className="bg-black/40 border border-sigil-border p-6 rounded-md my-6">
+              <h3 className="text-xl font-mono text-sigil-accent mb-3">Doctrine Fragments</h3>
+              <ul className="list-disc pl-5 space-y-3 text-sm">
+                <li>Schema-driven UIs allow dynamic reconfiguration based on context</li>
+                <li>Form fields are cognitive interfaces, moments of care</li>
+                <li>Shacks not cathedrals - flexible, adaptable structures over rigid monoliths</li>
+              </ul>
+            </div>
+            
+            <h3 className="text-xl font-mono text-sigil-accent mt-8">Technical Implementation</h3>
+            <p>
+              The submitted React code represents a comprehensive implementation of the FLOAT Dispatch interface, 
+              structured around the principles of component composition and schema-driven UI. This implementation 
+              serves as a concrete, portfolio-ready example of the exact technical principles identified as central 
+              to the Jane App Staff Software Developer role.
+            </p>
+            
+            <div className="mt-6">
+              <h4 className="text-lg font-mono text-sigil-accent mb-3">Component Architecture</h4>
+              <div className="bg-black/50 p-4 rounded-md font-mono text-sm overflow-x-auto">
+                <pre>
+{`App
+└── FloatDocument
+    ├── CollectionTable
+    ├── ThematicThread
+    ├── ContinuityBridge
+    │   └── ContextMarkers
+    ├── DoctrineShards
+    ├── Echo
+    ├── Sigil
+    └── SourceFiles`}
+                </pre>
+              </div>
+              <p className="mt-3">
+                This structure reflects a philosophy of component-based architecture where elements are modular, 
+                reusable, and driven by data structures - precisely the approach advocated for clinical forms at Jane App.
+              </p>
+            </div>
+            
+            <div className="mt-8">
+              <h4 className="text-lg font-mono text-sigil-accent mb-3">Schema-Driven Rendering</h4>
+              <p>
+                The implementation demonstrates several key aspects of schema-driven UI that directly align with the 
+                Jane App interview narrative:
+              </p>
+              
+              <ul className="list-disc pl-5 space-y-3 mt-3">
+                <li>
+                  <span className="font-bold">Data-Defined Structure:</span> The <code>FloatDocument</code> component 
+                  renders its content based on schema objects for collections, bridges, and thematic threads. This mirrors 
+                  how clinical forms would be structured where the form structure is defined by a schema rather than hard-coded.
+                </li>
+                <li>
+                  <span className="font-bold">Component Selection by Type:</span> Components like <code>ContinuityBridge</code> adapt 
+                  their rendering based on the data provided, showing/hiding elements conditionally.
+                </li>
+                <li>
+                  <span className="font-bold">Metadata-Driven Styling:</span> The <code>ContextMarkers</code> component uses 
+                  the mode and markers data to determine visual representation - a direct parallel to rendering different sections 
+                  of clinical forms based on practitioner roles or patient contexts.
+                </li>
+              </ul>
+            </div>
+            
+            <div className="mt-8">
+              <h4 className="text-lg font-mono text-sigil-accent mb-3">Interface Metaphors</h4>
+              
+              <Card className="bg-black/40 border border-sigil-border mb-4">
+                <CardHeader className="pb-2">
+                  <h5 className="font-mono text-sigil-accent">Continuity Bridges as Form Context</h5>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm">
+                    The <code>ContinuityBridge</code> component visually represents the concept of contextual persistence 
+                    across interactions - a direct parallel to maintaining patient context across different sections of a 
+                    clinical form. This demonstrates the understanding that forms aren't just about collecting isolated data 
+                    points but maintaining coherent context.
+                  </p>
+                </CardContent>
+              </Card>
+              
+              <Card className="bg-black/40 border border-sigil-border mb-4">
+                <CardHeader className="pb-2">
+                  <h5 className="font-mono text-sigil-accent">Thematic Threading as Cognitive Flow</h5>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm">
+                    The <code>ThematicThread</code> component visually connects technical implementation with philosophical 
+                    framing - literally representing the concept of "integration versus conquest" where technical implementation 
+                    supports rather than dictates the user's cognitive process.
+                  </p>
+                </CardContent>
+              </Card>
+              
+              <Card className="bg-black/40 border border-sigil-border mb-4">
+                <CardHeader className="pb-2">
+                  <h5 className="font-mono text-sigil-accent">Collection Table as Data Architecture</h5>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm">
+                    The <code>CollectionTable</code> presents a structured yet flexible view of data collections - 
+                    mirroring how one would approach the architecture of clinical form data in a healthcare context 
+                    where different practitioners need different views of the same underlying information.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+            
+            <div className="mt-8">
+              <h4 className="text-lg font-mono text-sigil-accent mb-3">Interview Connection Points</h4>
+              
+              <div className="bg-black/50 p-4 rounded-md mb-6">
+                <h5 className="text-sm font-mono text-sigil-accent mb-2">1. Schema-Driven UI Expertise</h5>
+                <pre className="text-xs overflow-x-auto">
+{`// From FloatDocument.tsx
+export function FloatDocument() {
+  // Data that drives the UI structure - similar to clinical form schemas
+  const collections = [
+    {
+      name: 'jane_application_context',
+      docCount: '~10',
+      function: 'Core role and company information',
+      changes: 'Added company overview and job description',
+    },
+    // More collection definitions...
+  ]
+  
+  // Components render based on the data schema
+  return (
+    <article className="space-y-8">
+      {/* Components render based on the schema */}
+      <CollectionTable collections={collections} />
+      {/* ... */}
+    </article>
+  )
+}`}
+                </pre>
+              </div>
+              
+              <div className="bg-black/50 p-4 rounded-md mb-6">
+                <h5 className="text-sm font-mono text-sigil-accent mb-2">2. Form Fields as Moments of Care</h5>
+                <pre className="text-xs overflow-x-auto">
+{`// From ContextMarkers.tsx
+export function ContextMarkers({ markers, mode }) {
+  const markerArray = markers?.split(',') || []
+  return (
+    <div className="flex flex-wrap gap-2 items-center">
+      {mode && (
+        <span className="px-2 py-0.5 bg-purple-900/30 text-purple-300 rounded-full text-xs font-mono">
+          mode: {mode}
+        </span>
+      )}
+      {markerArray.map((marker, i) => (
+        <span
+          key={i}
+          className="px-2 py-0.5 bg-gray-800 text-gray-300 rounded-full text-xs font-mono"
+        >
+          ctx::{marker.trim()}
+        </span>
+      ))}
+    </div>
+  )
+}`}
+                </pre>
+              </div>
+              
+              <div className="bg-black/50 p-4 rounded-md mb-6">
+                <h5 className="text-sm font-mono text-sigil-accent mb-2">3. Progressive Disclosure</h5>
+                <pre className="text-xs overflow-x-auto">
+{`// From ContinuityBridge.tsx
+export function ContinuityBridge({
+  id,
+  phase,
+  timestamp,
+  activeThreads,
+  ctxMarkers,
+  mode,
+  document,
+}) {
+  const [isExpanded, setIsExpanded] = useState(false)
+  
+  // ...
+
+  return (
+    <div className="bg-gray-900/50 rounded-lg border border-gray-800">
+      {/* Initial content always visible */}
+      <div className="p-4">
+        {/* ... */}
+      </div>
+      
+      {/* Progressive disclosure of additional content */}
+      {isExpanded && document && (
+        <div className="px-4 pb-4">
+          {/* ... */}
+        </div>
+      )}
+    </div>
+  )
+}`}
+                </pre>
+              </div>
+            </div>
+            
+            <div className="mt-8">
+              <h4 className="text-lg font-mono text-sigil-accent mb-3">Meta-Implementation Insights</h4>
+              
+              <div className="grid gap-4 md:grid-cols-3">
+                <Card className="bg-black/40 border border-sigil-border">
+                  <CardHeader className="pb-2">
+                    <h5 className="font-mono text-sigil-accent">Shacks Not Cathedrals</h5>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm">
+                      Each component is focused, modular, and adaptable. Instead of a monolithic structure, 
+                      the code is organized into small, cohesive components that can be easily modified or replaced.
+                    </p>
+                  </CardContent>
+                </Card>
+                
+                <Card className="bg-black/40 border border-sigil-border">
+                  <CardHeader className="pb-2">
+                    <h5 className="font-mono text-sigil-accent">Integration vs Conquest</h5>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm">
+                      The styling approach adapts to the specific needs of each component rather than 
+                      forcing components into a predetermined structure.
+                    </p>
+                  </CardContent>
+                </Card>
+                
+                <Card className="bg-black/40 border border-sigil-border">
+                  <CardHeader className="pb-2">
+                    <h5 className="font-mono text-sigil-accent">Tech with Human Focus</h5>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm">
+                      The code demonstrates both technical skill and human-centered design thinking - 
+                      balancing technical precision with human factors like progressive disclosure and clear visual hierarchy.
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+            
+            <div className="mt-8">
+              <h4 className="text-lg font-mono text-sigil-accent mb-3">Connection to Jane App Interview</h4>
+              <p>
+                This implementation serves as a concrete portfolio piece demonstrating:
+              </p>
+              
+              <ul className="list-disc pl-5 space-y-2 mt-3">
+                <li>Practical expertise with component-based architectures</li>
+                <li>Implementation of schema-driven UIs</li>
+                <li>Understanding of progressive disclosure in complex interfaces</li>
+                <li>Balance of technical precision with human-centered design</li>
+              </ul>
+              
+              <p className="mt-4">
+                These are precisely the skills highlighted in the Jane App Staff Software Developer role for 
+                clinical forms, making this implementation a powerful demonstration of capabilities.
+              </p>
+            </div>
+            
+            <div className="mt-8 p-4 bg-black/60 border border-sigil-border rounded-md">
+              <p className="italic text-sm font-mono text-sigil-accent">
+                🏥📝 {"{∴}"} Vector retrieval active. Implementation analysis complete.
               </p>
             </div>
           </section>
