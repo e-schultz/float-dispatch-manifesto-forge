@@ -27,6 +27,16 @@ const DispatchesPage = () => {
         
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           <DispatchCard
+            title="RFC - Temporal Awareness Instructions"
+            description="Framework for enhancing FLOAT's prompt instructions to handle temporal queries by leveraging structured daily summaries in the float_summary_docs collection."
+            date="2025-05-15"
+            imprint="activate"
+            slug="temporal-awareness-rfc"
+            tags={["rfc", "temporal-queries", "prompt-instructions"]}
+            size="32kb"
+          />
+          
+          <DispatchCard
             title="Continuity Bridges"
             description="Ritual infrastructure for bridging conversational context across multiple cognitive states and sessions."
             date="2025-05-14"
