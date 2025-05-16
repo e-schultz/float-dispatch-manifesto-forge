@@ -16,6 +16,7 @@ import AboutPage from "./pages/about";
 import SubscribePage from "./pages/subscribe";
 import ContactPage from "./pages/contact";
 import DispatchesPage from "./pages/dispatches";
+import ChangelogPage from "./pages/changelog";
 
 // Create a React Query client
 const queryClient = new QueryClient();
@@ -38,6 +39,7 @@ const App = () => (
           <Route path="/subscribe" element={<SubscribePage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/dispatches" element={<DispatchesPage />} />
+          <Route path="/changelog" element={<ChangelogPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
