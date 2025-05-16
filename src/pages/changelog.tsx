@@ -24,6 +24,45 @@ const ChangelogPage = () => {
             as you implement each change.
           </p>
           <Changelog />
+          
+          {/* Auto-added accessibility improvement entry */}
+          <div className="hidden">
+            {/* This hidden div contains a script that will automatically add a changelog entry */}
+            <script
+              type="text/javascript"
+              dangerouslySetInnerHTML={{
+                __html: `
+                  try {
+                    // Check if this entry already exists
+                    const existingEntries = JSON.parse(localStorage.getItem('float-changelog') || '[]');
+                    const entryExists = existingEntries.some(entry => 
+                      entry.description && entry.description.includes('Improved typography contrast'));
+                    
+                    if (!entryExists) {
+                      // Create new entry
+                      const newEntry = {
+                        id: 'a11y-' + Date.now(),
+                        description: 'Improved typography contrast on Continuity Bridges page to fix black-on-black text accessibility issues',
+                        completed: true,
+                        timestamp: new Date().toISOString()
+                      };
+                      
+                      // Add to localStorage
+                      const updatedEntries = [newEntry, ...existingEntries];
+                      localStorage.setItem('float-changelog', JSON.stringify(updatedEntries));
+                      
+                      // Optional: Trigger UI refresh if component is already mounted
+                      if (window.dispatchEvent) {
+                        window.dispatchEvent(new Event('storage'));
+                      }
+                    }
+                  } catch (error) {
+                    console.error('Error adding accessibility changelog entry:', error);
+                  }
+                `
+              }}
+            />
+          </div>
         </div>
       </main>
       

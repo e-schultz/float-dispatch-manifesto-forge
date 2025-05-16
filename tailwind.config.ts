@@ -63,7 +63,7 @@ export default {
 				sigil: {
 					DEFAULT: "#000000",
 					accent: "#E24A90",
-					light: "#ff0066",
+					light: "#ff6eb4", // Enhanced lighter color for better contrast
 					border: "rgba(226, 74, 144, 0.3)"
 				},
 				activate: {
