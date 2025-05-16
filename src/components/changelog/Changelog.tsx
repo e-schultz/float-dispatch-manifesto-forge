@@ -1,10 +1,10 @@
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { CheckIcon, PlusIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "@/components/ui/card";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 
 export interface ChangelogEntry {
@@ -41,11 +41,12 @@ const Changelog = () => {
     localStorage.setItem("changelogEntries", JSON.stringify(entries));
   }, [entries]);
 
-  const generateId = (): string => {
+  // Memoize functions to prevent unnecessary re-renders
+  const generateId = useCallback((): string => {
     return `entry-${Date.now()}-${Math.floor(Math.random() * 1000)}`;
-  };
+  }, []);
 
-  const handleAddEntry = () => {
+  const handleAddEntry = useCallback(() => {
     if (!newEntryDescription.trim()) {
       toast({
         description: "Please enter a description for the changelog entry.",
@@ -60,41 +61,41 @@ const Changelog = () => {
       timestamp: new Date().toISOString(),
     };
 
-    setEntries([...entries, newEntry]);
+    setEntries((prevEntries) => [...prevEntries, newEntry]);
     setNewEntryDescription("");
     
     toast({
       title: "Entry Added",
       description: "New changelog entry has been created.",
     });
-  };
+  }, [newEntryDescription, generateId, toast]);
 
-  const toggleEntryCompletion = (id: string) => {
-    const updatedEntries = entries.map(entry => {
-      if (entry.id === id) {
-        const updated = { ...entry, completed: !entry.completed };
-        
-        // Show toast when an entry is completed
-        if (updated.completed) {
-          toast({
-            title: "Task Completed",
-            description: `"${entry.description}" marked as complete.`,
-          });
+  const toggleEntryCompletion = useCallback((id: string) => {
+    setEntries((prevEntries) => 
+      prevEntries.map(entry => {
+        if (entry.id === id) {
+          const updated = { ...entry, completed: !entry.completed };
+          
+          // Show toast when an entry is completed
+          if (updated.completed) {
+            toast({
+              title: "Task Completed",
+              description: `"${entry.description}" marked as complete.`,
+            });
+          }
+          
+          return updated;
         }
-        
-        return updated;
-      }
-      return entry;
-    });
-
-    setEntries(updatedEntries);
-  };
+        return entry;
+      })
+    );
+  }, [toast]);
 
   // Format timestamp for display
-  const formatDate = (timestamp: string) => {
+  const formatDate = useCallback((timestamp: string) => {
     const date = new Date(timestamp);
     return date.toLocaleString();
-  };
+  }, []);
 
   return (
     <section className="py-12 px-4">
@@ -113,8 +114,13 @@ const Changelog = () => {
               onKeyDown={(e) => {
                 if (e.key === "Enter") handleAddEntry();
               }}
+              aria-label="New changelog entry description"
             />
-            <Button onClick={handleAddEntry} className="flex items-center gap-2">
+            <Button 
+              onClick={handleAddEntry} 
+              className="flex items-center gap-2"
+              aria-label="Add new changelog entry"
+            >
               <PlusIcon className="h-4 w-4" /> Add
             </Button>
           </div>
@@ -137,6 +143,7 @@ const Changelog = () => {
                       checked={entry.completed}
                       onCheckedChange={() => toggleEntryCompletion(entry.id)}
                       className="data-[state=checked]:bg-green-600"
+                      aria-label={`Mark "${entry.description}" as ${entry.completed ? "incomplete" : "complete"}`}
                     />
                   </div>
                   <div className="flex-grow">
@@ -158,4 +165,5 @@ const Changelog = () => {
   );
 };
 
-export default Changelog;
+// Prevent unnecessary re-renders
+export default React.memo(Changelog);
