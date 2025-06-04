@@ -3,7 +3,9 @@ project: https://lovable.dev/projects/00b346d5-db1e-46fd-a10d-40db663396a2
 preview: https://lov-float-dispatch-manifesto-forge.lovable.app/
 ---
 # FLOAT.DISPATCH
+
 <img width="1463" alt="Screenshot 2025-06-04 at 2 16 10 PM" src="https://github.com/user-attachments/assets/f89bf6f0-a7aa-4811-96c5-c1d0fb6a86b1" />
+
 <img width="19" alt="Screenshot 2025-06-04 at 2 16 04 PM" src="https://github.com/user-attachments/assets/a4d76cd2-8e23-4cf0-8e4e-5a876c0e7867" />
 
 
