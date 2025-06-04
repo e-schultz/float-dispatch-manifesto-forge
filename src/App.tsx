@@ -16,6 +16,9 @@ import ContinuityBridges from "./pages/imprints/sigil-studies/continuity-bridges
 import OracleCrosstalk from "./pages/imprints/sigil-studies/oracle-crosstalk";
 import SystemsThinking from "./pages/imprints/spa/systems-thinking";
 import TShirtRule from "./pages/imprints/spa/tshirt-rule";
+import ActivateIndex from "./pages/imprints/activate/index";
+import TechCraftIndex from "./pages/imprints/techcraft/index";
+import InterfacePoeticsIndex from "./pages/imprints/interface-poetics/index";
 import SubscribePage from "./pages/subscribe";
 
 const queryClient = new QueryClient();
@@ -35,6 +38,9 @@ function App() {
             <Route path="/documentation" element={<DocumentationPage />} />
             <Route path="/subscribe" element={<SubscribePage />} />
             <Route path="/imprints" element={<ImprintsIndex />} />
+            <Route path="/imprints/activate" element={<ActivateIndex />} />
+            <Route path="/imprints/techcraft" element={<TechCraftIndex />} />
+            <Route path="/imprints/interface-poetics" element={<InterfacePoeticsIndex />} />
             <Route path="/imprints/sigil-studies" element={<SigilStudiesIndex />} />
             <Route path="/imprints/sigil-studies/continuity-bridges" element={<ContinuityBridges />} />
             <Route path="/imprints/sigil-studies/oracle-crosstalk" element={<OracleCrosstalk />} />
