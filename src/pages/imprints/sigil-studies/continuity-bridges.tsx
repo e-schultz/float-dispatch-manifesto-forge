@@ -3,10 +3,9 @@ import React from "react";
 import ImprintHeader from "@/components/ImprintHeader";
 import FloatNavBar from "@/components/FloatNavBar";
 import FloatFooter from "@/components/FloatFooter";
-import { CalendarIcon, Tag, Code, Layers } from "lucide-react";
+import { CalendarIcon, Tag, Code } from "lucide-react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const ContinuityBridgesPage = () => {
   return (

@@ -1,5 +1,5 @@
 
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useToast } from "@/hooks/use-toast";
 
 // This component automatically adds a code audit entry to the changelog

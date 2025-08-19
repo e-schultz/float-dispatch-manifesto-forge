@@ -1,6 +1,5 @@
 
 import React from "react";
-import { Link } from "react-router-dom";
 import ImprintHeader from "../../../components/ImprintHeader";
 import FloatNavBar from "../../../components/FloatNavBar";
 import FloatFooter from "../../../components/FloatFooter";

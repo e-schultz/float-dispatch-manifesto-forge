@@ -19,7 +19,7 @@ export default function DispatchCard({
   date,
   imprint,
   slug,
-  tags = [],
+  tags: _tags = [],
   size = "12kb"
 }: DispatchCardProps) {
   // Imprint-specific styling
