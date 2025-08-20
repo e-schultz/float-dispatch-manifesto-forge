@@ -18,6 +18,7 @@ import SystemsThinking from "./pages/imprints/spa/systems-thinking";
 import TShirtRule from "./pages/imprints/spa/tshirt-rule";
 import ActivateIndex from "./pages/imprints/activate/index";
 import TechCraftIndex from "./pages/imprints/techcraft/index";
+import HardcodedToDataDrivenPage from "./pages/imprints/techcraft/hardcoded-to-data-driven";
 import InterfacePoeticsIndex from "./pages/imprints/interface-poetics/index";
 import SubscribePage from "./pages/subscribe";
 
@@ -40,6 +41,7 @@ function App() {
             <Route path="/imprints" element={<ImprintsIndex />} />
             <Route path="/imprints/activate" element={<ActivateIndex />} />
             <Route path="/imprints/techcraft" element={<TechCraftIndex />} />
+            <Route path="/imprints/techcraft/hardcoded-to-data-driven" element={<HardcodedToDataDrivenPage />} />
             <Route path="/imprints/interface-poetics" element={<InterfacePoeticsIndex />} />
             <Route path="/imprints/sigil-studies" element={<SigilStudiesIndex />} />
             <Route path="/imprints/sigil-studies/continuity-bridges" element={<ContinuityBridges />} />
