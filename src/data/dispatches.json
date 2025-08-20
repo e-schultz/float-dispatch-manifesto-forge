@@ -240,7 +240,7 @@
       "description": "Exploring the resonance patterns that emerge when prompting across multiple AI models. What echoes spill from cross-model prompting?",
       "date": "2025-05-02",
       "imprint": "sigil-studies",
-      "slug": "oracle-crosstalk-slutprint-leaks",
+      "slug": "oracle-crosstalk",
       "tags": ["ai", "prompts", "ritual"],
       "size": "42kb",
       "featured": false,
