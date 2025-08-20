@@ -221,19 +221,118 @@ const DispatchDetail = () => {
                       </Card>
                     )}
                     
+                    {section.steps && (
+                      <ol className="list-decimal list-inside space-y-2 mb-6 text-gray-200">
+                        {section.steps.map((step: string, i: number) => (
+                          <li key={i} className="leading-relaxed">{step}</li>
+                        ))}
+                      </ol>
+                    )}
+                    
+                    {section.categories && (
+                      <div className="grid gap-6 mb-6">
+                        {Object.entries(section.categories).map(([key, category]: [string, any]) => (
+                          <Card key={key} className={`bg-black/40 border ${imprint.colors.border}`}>
+                            <CardHeader className="pb-3">
+                              <h4 className={`text-lg font-mono ${imprint.colors.accent}`}>
+                                {category.title}
+                              </h4>
+                            </CardHeader>
+                            <CardContent>
+                              <p className="text-sm text-gray-200 mb-3">{category.description}</p>
+                              <ul className="list-disc list-inside space-y-1 text-xs text-gray-300">
+                                {category.examples.map((example: string, i: number) => (
+                                  <li key={i}>{example}</li>
+                                ))}
+                              </ul>
+                            </CardContent>
+                          </Card>
+                        ))}
+                      </div>
+                    )}
+                    
+                    {section.caseStudy && (
+                      <Card className={`bg-black/40 border ${imprint.colors.border} mb-6`}>
+                        <CardHeader>
+                          <h4 className={`text-lg font-mono ${imprint.colors.accent}`}>Case Study</h4>
+                        </CardHeader>
+                        <CardContent className="space-y-4">
+                          <div>
+                            <h5 className="text-sm font-mono text-gray-300 mb-2">Prompt:</h5>
+                            <p className="text-sm text-gray-200 italic">"{section.caseStudy.prompt}"</p>
+                          </div>
+                          <div>
+                            <h5 className="text-sm font-mono text-gray-300 mb-2">Findings:</h5>
+                            <p className="text-sm text-gray-200 mb-3">{section.caseStudy.findings}</p>
+                            <ul className="list-disc list-inside space-y-1 text-xs text-gray-300">
+                              {section.caseStudy.results.map((result: string, i: number) => (
+                                <li key={i}>{result}</li>
+                              ))}
+                            </ul>
+                          </div>
+                          <div>
+                            <h5 className="text-sm font-mono text-gray-300 mb-2">Insight:</h5>
+                            <p className="text-sm text-gray-200">{section.caseStudy.insight}</p>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    )}
+                    
+                    {section.ethics && (
+                      <ul className="list-disc list-inside space-y-2 mb-6 text-gray-200">
+                        {section.ethics.map((item: string, i: number) => (
+                          <li key={i} className="leading-relaxed">{item}</li>
+                        ))}
+                      </ul>
+                    )}
+                    
                     {section.blockquote && (
                       <blockquote className={`border-l-4 ${imprint.colors.border} pl-6 my-8 italic`}>
                         <p className="text-xl text-gray-200 mb-2">
                           "{section.blockquote.text}"
                         </p>
-                        <cite className="text-sm text-gray-400 not-italic">
-                          — {section.blockquote.author}
-                        </cite>
+                        {section.blockquote.author && (
+                          <cite className="text-sm text-gray-400 not-italic">
+                            — {section.blockquote.author}
+                          </cite>
+                        )}
+                        {section.blockquote.context && (
+                          <cite className="text-sm text-gray-400 not-italic">
+                            {section.blockquote.context}
+                          </cite>
+                        )}
                       </blockquote>
                     )}
                   </section>
                 ))}
                 
+                {/* Call to Action for external content */}
+                {dispatch.content.callToAction && (
+                  <section className="mb-12">
+                    <Card className={`${imprint.colors.border} border bg-black/40 max-w-3xl mx-auto`}>
+                      <CardContent className="pt-6 text-center">
+                        <h3 className={`text-xl font-mono ${imprint.colors.accent} mb-4`}>
+                          Continue Reading
+                        </h3>
+                        <p className="text-lg mb-6 text-gray-200">
+                          {dispatch.content.callToAction.text}
+                        </p>
+                        <a 
+                          href={dispatch.content.callToAction.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={`inline-flex items-center px-6 py-3 bg-black border ${imprint.colors.border} rounded-md ${imprint.colors.accent} hover:text-white transition-colors font-mono`}
+                        >
+                          Visit Full Site
+                          <svg className="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                          </svg>
+                        </a>
+                      </CardContent>
+                    </Card>
+                  </section>
+                )}
+
                 {/* Conclusion */}
                 {dispatch.content.conclusion && (
                   <section className="mb-12">
