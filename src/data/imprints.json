@@ -1,0 +1,85 @@
+{
+  "imprints": [
+    {
+      "id": "techcraft",
+      "name": "techcraft",
+      "displayName": "TECHCRAFT",
+      "description": "Technical deep dives, system architecture, code philosophy essays, and architectural critiques.",
+      "shortDescription": "Technical explorations and software development insights with a focus on patterns beyond frameworks.",
+      "tags": ["dev", "apis", "systems", "architecture"],
+      "colors": {
+        "bg": "bg-techcraft-DEFAULT/50",
+        "bgSolid": "bg-techcraft-DEFAULT/90",
+        "border": "border-techcraft-border",
+        "accent": "text-techcraft-accent",
+        "accentHex": "#4A90E2"
+      },
+      "icon": "Code"
+    },
+    {
+      "id": "sigil-studies",
+      "name": "sigil-studies",
+      "displayName": "SIGIL STUDIES",
+      "description": "AI prompting methodologies, ritual tech practices, creative collaborations, and model experiments.",
+      "shortDescription": "Ritual infrastructure and conversational context bridging across cognitive states.",
+      "tags": ["ai", "prompts", "divination", "ritual"],
+      "colors": {
+        "bg": "bg-black",
+        "bgSolid": "bg-black",
+        "border": "border-sigil-border",
+        "accent": "text-sigil-accent",
+        "accentHex": "#E24A90"
+      },
+      "icon": "Hash"
+    },
+    {
+      "id": "spa",
+      "name": "spa",
+      "displayName": "SPA",
+      "fullName": "Systems, Patterns, Aesthetics",
+      "description": "Systems thinking, personal growth, cognitive approaches to complexity, and ritual infrastructure.",
+      "shortDescription": "Systems thinking approaches to building sustainable content and life practices.",
+      "tags": ["systems", "patterns", "cognition", "ritual"],
+      "colors": {
+        "bg": "bg-black",
+        "bgSolid": "bg-black",
+        "border": "border-purple-900",
+        "accent": "text-purple-400",
+        "accentHex": "#9333EA"
+      },
+      "icon": "Grid3X3"
+    },
+    {
+      "id": "activate",
+      "name": "activate",
+      "displayName": "ACTIVATE",
+      "description": "Digital activism, tech commons, community futures, critical analysis, and tactical toolkits.",
+      "shortDescription": "Frameworks for enhancing temporal awareness and system integrity.",
+      "tags": ["activism", "commentary", "futures", "commons"],
+      "colors": {
+        "bg": "bg-black",
+        "bgSolid": "bg-black",
+        "border": "border-activate-border",
+        "accent": "text-activate-accent",
+        "accentHex": "#00ff9f"
+      },
+      "icon": "Zap"
+    },
+    {
+      "id": "interface-poetics",
+      "name": "interface-poetics",
+      "displayName": "INTERFACE POETICS",
+      "description": "UX design, component systems, interaction patterns, and ambient interface explorations.",
+      "shortDescription": "User experience and interaction design explorations.",
+      "tags": ["ux", "design", "components", "interaction"],
+      "colors": {
+        "bg": "bg-black",
+        "bgSolid": "bg-black",
+        "border": "border-interface-border",
+        "accent": "text-interface-accent",
+        "accentHex": "#8b00ff"
+      },
+      "icon": "Edit3"
+    }
+  ]
+}

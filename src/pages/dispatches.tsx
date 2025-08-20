@@ -4,8 +4,11 @@ import FloatNavBar from "../components/FloatNavBar";
 import FloatFooter from "../components/FloatFooter";
 import DispatchCard from "../components/DispatchCard";
 import { Grid3X3 } from 'lucide-react';
+import { useDispatches } from '@/hooks/useData';
 
 const DispatchesPage = () => {
+  const dispatches = useDispatches();
+  
   return (
     <div className="min-h-screen bg-black text-white">
       <FloatNavBar />
@@ -26,75 +29,18 @@ const DispatchesPage = () => {
         </div>
         
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          <DispatchCard
-            title="RFC - Temporal Awareness Instructions"
-            description="Framework for enhancing FLOAT's prompt instructions to handle temporal queries by leveraging structured daily summaries in the float_summary_docs collection."
-            date="2025-05-15"
-            imprint="activate"
-            slug="temporal-awareness-rfc"
-            tags={["rfc", "temporal-queries", "prompt-instructions"]}
-            size="32kb"
-          />
-          
-          <DispatchCard
-            title="Continuity Bridges"
-            description="Ritual infrastructure for bridging conversational context across multiple cognitive states and sessions."
-            date="2025-05-14"
-            imprint="sigil-studies"
-            slug="continuity-bridges"
-            tags={["context", "ritual", "float"]}
-            size="36kb"
-          />
-        
-          <DispatchCard
-            title="Systems Thinking for the Soul"
-            description="How to Build Content (and Life) That Doesn't Collapse. A ritual shack × systems bard × recursive case study."
-            date="2025-05-04"
-            imprint="spa"
-            slug="systems-thinking"
-            tags={["systems", "patterns", "ritual"]}
-            size="45kb"
-          />
-          
-          <DispatchCard
-            title="Better as a T-Shirt Rule"
-            description="Symbolic compression for decision-making. How to distill complex ideas into actionable, memorable forms."
-            date="2025-05-03"
-            imprint="spa"
-            slug="tshirt-rule"
-            tags={["rituals", "systems", "knowledge"]}
-            size="38kb"
-          />
-          
-          <DispatchCard
-            title="Oracle Crosstalk: Slutprint Leaks"
-            description="Exploring the resonance patterns that emerge when prompting across multiple AI models. What echoes spill from cross-model prompting?"
-            date="2025-05-02"
-            imprint="sigil-studies"
-            slug="oracle-crosstalk-slutprint-leaks"
-            tags={["ai", "prompts", "ritual"]}
-            size="42kb"
-          />
-          
-          <DispatchCard
-            title="Reactive Patterns: Beyond the Framework"
-            description="We become so immersed in framework-thinking that we forget to see the underlying patterns. React isn't special because it's React."
-            date="2025-05-02"
-            imprint="techcraft"
-            slug="reactive-patterns-beyond-framework"
-            tags={["development", "architecture", "patterns"]}
-            size="38kb"
-          />
-          
-          <DispatchCard
-            title="FLOAT vs AI Gaslighting"
-            description="A deep exploration of how OpenAI's 'management cosplay' update violated core principles of trust and authentic interaction."
-            date="2025-05-01"
-            imprint="activate"
-            slug="float-vs-ai-gaslighting"
-            tags={["ai-ethics", "trust", "system-integrity"]}
-            size="25kb"
-          />
+          {dispatches.map((dispatch) => (
+            <DispatchCard
+              key={dispatch.id}
+              title={dispatch.title}
+              description={dispatch.description}
+              date={dispatch.date}
+              imprint={dispatch.imprint as any}
+              slug={dispatch.slug}
+              tags={dispatch.tags}
+              size={dispatch.size}
+            />
+          ))}
         </div>
       </main>
       

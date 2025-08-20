@@ -1,0 +1,35 @@
+{
+  "title": "FLOAT.DISPATCH",
+  "tagline": "A publishing house exploring the theme of 'chaos made coherent' through curated collections of works across technology, philosophy, and art.",
+  "hero": {
+    "title": "FLOAT.",
+    "titleAccent": "DISPATCH",
+    "description": "A publishing house exploring the theme of 'chaos made coherent' through curated collections of works across technology, philosophy, and art.",
+    "primaryCTA": {
+      "text": "Browse Imprints",
+      "link": "/imprints",
+      "icon": "BookOpen"
+    },
+    "secondaryCTA": {
+      "text": "About FLOAT.dispatch",
+      "link": "/about",
+      "icon": "ArrowRight"
+    }
+  },
+  "changelog": {
+    "title": "Project Changelog",
+    "description": "Track the evolution of FLOAT with our project changelog. Document changes, improvements, and milestones.",
+    "ctaText": "View Changelog",
+    "ctaLink": "/changelog"
+  },
+  "footer": {
+    "copyright": "© 2025 FLOAT.DISPATCH",
+    "tagline": "chaos made coherent",
+    "links": [
+      { "text": "About", "href": "/about" },
+      { "text": "Imprints", "href": "/imprints" },
+      { "text": "Subscribe", "href": "/subscribe" },
+      { "text": "Contact", "href": "/contact" }
+    ]
+  }
+}

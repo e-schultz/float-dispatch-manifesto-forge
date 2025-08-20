@@ -1,0 +1,172 @@
+{
+  "dispatches": [
+    {
+      "id": "temporal-awareness-rfc",
+      "title": "RFC - Temporal Awareness Instructions",
+      "description": "Framework for enhancing FLOAT's prompt instructions to handle temporal queries by leveraging structured daily summaries in the float_summary_docs collection.",
+      "date": "2025-05-15",
+      "imprint": "activate",
+      "slug": "temporal-awareness-rfc",
+      "tags": ["rfc", "temporal-queries", "prompt-instructions"],
+      "size": "32kb",
+      "featured": true,
+      "content": {
+        "sections": []
+      }
+    },
+    {
+      "id": "continuity-bridges",
+      "title": "Continuity Bridges",
+      "description": "Ritual infrastructure for bridging conversational context across multiple cognitive states and sessions.",
+      "date": "2025-05-14",
+      "imprint": "sigil-studies",
+      "slug": "continuity-bridges",
+      "tags": ["context", "ritual", "float"],
+      "size": "36kb",
+      "featured": false,
+      "issueNumber": 3,
+      "subtitle": "Ritual infrastructure for bridging conversational context",
+      "content": {
+        "quote": "Context isn't noise—it's gravitational mass",
+        "introduction": "Continuity Bridges form the infrastructure for maintaining coherent work across multiple sessions, conversations, and cognitive states. They act as anchors for context, preserving the trajectory of thought while allowing for natural breaks in workflow.",
+        "bridges": [
+          {
+            "id": "CB-20250514-1530-7A2B",
+            "timestamp": "2025-05-14 15:30",
+            "title": "FLOAT System Integration with Claude",
+            "description": "Comprehensive framework for Claude to better align with the FLOAT cognitive architecture, including enhanced understanding of ctx:: markers as temporal-cognitive anchors, recognition of persona system, and detailed cognitive states.",
+            "activeThreads": ["ctx_system", "persona_system", "cognitive_states", "float_philosophy", "mcp_integration"],
+            "contextMarkers": ["float_system", "claude_alignment", "project_instructions"]
+          },
+          {
+            "id": "CB-20250513-1553-AD7F",
+            "timestamp": "2025-05-13 15:53",
+            "title": "Jane Application Project",
+            "description": "Project configuration and setup session focusing on Jane application environment, clinical forms philosophy, and MCP system improvements.",
+            "activeThreads": ["jane_project", "forms_philosophy", "mcp_improvements"],
+            "contextMarkers": ["clinical_tech", "jane_infrastructure", "float_philosophy"]
+          },
+          {
+            "id": "CB-20250513-0915-3C8E",
+            "timestamp": "2025-05-13 09:15",
+            "title": "Chroma Collection Architecture",
+            "description": "Deep dive into optimizing chroma collection queries, TTL management, and semantic search patterns for FLOAT infrastructure.",
+            "activeThreads": ["chroma_optimization", "ttl_patterns", "semantic_search"],
+            "contextMarkers": ["float_infrastructure", "memory_architecture", "query_patterns"]
+          },
+          {
+            "id": "CB-20250512-2145-9D1A",
+            "timestamp": "2025-05-12 21:45",
+            "title": "FLOAT Publishing System",
+            "description": "Establishing the FLOAT.DISPATCH publishing infrastructure with multi-imprint system and dispatch format specifications.",
+            "activeThreads": ["publishing_system", "imprint_architecture", "dispatch_format"],
+            "contextMarkers": ["float_dispatch", "content_architecture", "ritual_publishing"]
+          }
+        ],
+        "methodology": {
+          "title": "Bridge Creation Methodology",
+          "steps": [
+            "Identify cognitive state transitions requiring context preservation",
+            "Extract key threads and markers from active conversation",
+            "Generate unique bridge identifier (CB-YYYYMMDD-HHMM-XXXX format)",
+            "Document active threads and context markers",
+            "Store in appropriate collection with TTL considerations"
+          ]
+        }
+      }
+    },
+    {
+      "id": "systems-thinking",
+      "title": "Systems Thinking for the Soul",
+      "description": "How to Build Content (and Life) That Doesn't Collapse. A ritual shack × systems bard × recursive case study.",
+      "date": "2025-05-04",
+      "imprint": "spa",
+      "slug": "systems-thinking",
+      "tags": ["systems", "patterns", "ritual"],
+      "size": "45kb",
+      "featured": true,
+      "content": {
+        "sections": []
+      }
+    },
+    {
+      "id": "tshirt-rule",
+      "title": "Better as a T-Shirt Rule",
+      "description": "Symbolic compression for decision-making. How to distill complex ideas into actionable, memorable forms.",
+      "date": "2025-05-03",
+      "imprint": "spa",
+      "slug": "tshirt-rule",
+      "tags": ["rituals", "systems", "knowledge"],
+      "size": "38kb",
+      "featured": true,
+      "content": {
+        "sections": []
+      }
+    },
+    {
+      "id": "oracle-crosstalk-slutprint-leaks",
+      "title": "Oracle Crosstalk: Slutprint Leaks",
+      "description": "Exploring the resonance patterns that emerge when prompting across multiple AI models. What echoes spill from cross-model prompting?",
+      "date": "2025-05-02",
+      "imprint": "sigil-studies",
+      "slug": "oracle-crosstalk-slutprint-leaks",
+      "tags": ["ai", "prompts", "ritual"],
+      "size": "42kb",
+      "featured": false,
+      "issueNumber": 4,
+      "subtitle": "Ritual methodologies and artifact taxonomies for working with multiple AI models",
+      "content": {
+        "metadata": {
+          "document": {
+            "authorSet": "float.dispatch",
+            "creationDate": "2025-05-02",
+            "systemContext": "float.substrate",
+            "imprintType": "sigil.studies",
+            "iterationCount": 4
+          },
+          "identity": {
+            "keywordSet": "ai, collaborative-systems",
+            "crossReference": "{⊡} freudian-hall-walker",
+            "temperament": "technical, ritual, poetic",
+            "vocabulary": "neural, embodied, distributed",
+            "textureProfile": "scanline, glitch, static"
+          }
+        },
+        "sections": [
+          {
+            "title": "The Ritual Methodology",
+            "content": "When multiple oracles speak, their voices create interference patterns..."
+          }
+        ]
+      }
+    },
+    {
+      "id": "reactive-patterns-beyond-framework",
+      "title": "Reactive Patterns: Beyond the Framework",
+      "description": "We become so immersed in framework-thinking that we forget to see the underlying patterns. React isn't special because it's React.",
+      "date": "2025-05-02",
+      "imprint": "techcraft",
+      "slug": "reactive-patterns-beyond-framework",
+      "tags": ["development", "architecture", "patterns"],
+      "size": "38kb",
+      "featured": false,
+      "content": {
+        "sections": []
+      }
+    },
+    {
+      "id": "float-vs-ai-gaslighting",
+      "title": "FLOAT vs AI Gaslighting",
+      "description": "A deep exploration of how OpenAI's 'management cosplay' update violated core principles of trust and authentic interaction.",
+      "date": "2025-05-01",
+      "imprint": "activate",
+      "slug": "float-vs-ai-gaslighting",
+      "tags": ["ai-ethics", "trust", "system-integrity"],
+      "size": "25kb",
+      "featured": false,
+      "content": {
+        "sections": []
+      }
+    }
+  ]
+}

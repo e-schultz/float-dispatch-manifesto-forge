@@ -10,9 +10,12 @@ import RitualReflections from "../components/home/RitualReflections";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import AuditChangelogEntry from "../components/changelog/AuditChangelogEntry";
+import { useSiteData } from '@/hooks/useData';
 
 // Main landing page component
 const Index = () => {
+  const siteData = useSiteData();
+  
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Automatically add audit entry to changelog */}
@@ -30,13 +33,13 @@ const Index = () => {
       {/* Changelog section */}
       <section className="py-12 px-4 border-t border-gray-800">
         <div className="container mx-auto text-center">
-          <h2 className="text-2xl font-bold font-mono mb-4">Project Changelog</h2>
+          <h2 className="text-2xl font-bold font-mono mb-4">{siteData.changelog.title}</h2>
           <p className="max-w-2xl mx-auto mb-6 opacity-80">
-            Track the evolution of FLOAT with our project changelog. Document changes, improvements, and milestones.
+            {siteData.changelog.description}
           </p>
           <Button asChild variant="outline" className="border-sigil-border">
-            <Link to="/changelog" aria-label="View changelog">
-              View Changelog
+            <Link to={siteData.changelog.ctaLink} aria-label="View changelog">
+              {siteData.changelog.ctaText}
             </Link>
           </Button>
         </div>

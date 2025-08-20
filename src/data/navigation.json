@@ -1,0 +1,17 @@
+{
+  "main": [
+    { "text": "Dispatches", "href": "/dispatches" },
+    { "text": "Imprints", "href": "/imprints" },
+    { "text": "About", "href": "/about" },
+    { "text": "Subscribe", "href": "/subscribe" }
+  ],
+  "mobile": [
+    { "text": "Home", "href": "/" },
+    { "text": "Dispatches", "href": "/dispatches" },
+    { "text": "Imprints", "href": "/imprints" },
+    { "text": "Changelog", "href": "/changelog" },
+    { "text": "About", "href": "/about" },
+    { "text": "Contact", "href": "/contact" },
+    { "text": "Subscribe", "href": "/subscribe" }
+  ]
+}
