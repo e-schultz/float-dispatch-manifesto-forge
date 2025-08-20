@@ -24,7 +24,7 @@ const HardcodedToDataDrivenPage = () => {
   const { content } = dispatch;
   
   return (
-    <div className="min-h-screen bg-techcraft-DEFAULT text-white">
+    <div className="min-h-screen bg-black text-white">
       <FloatNavBar />
       
       <ImprintHeader

@@ -4,28 +4,10 @@ import { Link } from "react-router-dom";
 import FloatNavBar from "../../../components/FloatNavBar";
 import FloatFooter from "../../../components/FloatFooter";
 import ImprintHeader from "../../../components/ImprintHeader";
+import { useDispatchesByImprint } from '@/hooks/useData';
 
 const TechCraftIndex = () => {
-  const sampleDispatches = [
-    {
-      title: "Reactive Patterns in Modern Systems",
-      slug: "reactive-patterns",
-      date: "2025-05-02",
-      description: "Deep dive into reactive programming patterns and their application in distributed systems."
-    },
-    {
-      title: "API Design Philosophy",
-      slug: "api-design-philosophy", 
-      date: "2025-04-15",
-      description: "Exploring the principles behind creating intuitive, maintainable, and scalable APIs."
-    },
-    {
-      title: "System Boundaries and Abstractions",
-      slug: "system-boundaries",
-      date: "2025-04-28",
-      description: "How to define clear boundaries between system components for better modularity."
-    }
-  ];
+  const techcraftDispatches = useDispatchesByImprint('techcraft');
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -74,19 +56,40 @@ const TechCraftIndex = () => {
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-2xl font-bold font-mono text-techcraft-accent mb-8">Recent Dispatches</h2>
           <div className="space-y-6">
-            {sampleDispatches.map((dispatch, index) => (
-              <div key={dispatch.slug} className="border border-techcraft-border rounded-md p-6 hover:border-techcraft-accent transition-colors bg-techcraft-DEFAULT/20">
-                <div className="flex items-start justify-between mb-3">
-                  <h3 className="text-xl font-bold font-mono text-techcraft-accent">{dispatch.title}</h3>
-                  <span className="text-sm opacity-70 font-mono">{dispatch.date}</span>
+            {techcraftDispatches.map((dispatch, index) => (
+              <Link 
+                key={dispatch.slug} 
+                to={`/imprints/techcraft/${dispatch.slug}`}
+                className="block"
+              >
+                <div className="border border-techcraft-border rounded-md p-6 hover:border-techcraft-accent transition-colors bg-techcraft-DEFAULT/20">
+                  <div className="flex items-start justify-between mb-3">
+                    <h3 className="text-xl font-bold font-mono text-techcraft-accent">{dispatch.title}</h3>
+                    <span className="text-sm opacity-70 font-mono">{dispatch.date}</span>
+                  </div>
+                  <p className="text-sm opacity-90 mb-4">{dispatch.description}</p>
+                  <div className="flex items-center justify-between">
+                    <div className="text-xs font-mono opacity-70">
+                      float.dispatch::techcraft::{String(index + 1).padStart(2, '0')}
+                    </div>
+                    <div className="flex gap-2">
+                      {dispatch.tags?.slice(0, 3).map(tag => (
+                        <span key={tag} className="text-xs px-2 py-1 bg-techcraft-DEFAULT/50 border border-techcraft-border rounded">
+                          #{tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
                 </div>
-                <p className="text-sm opacity-90 mb-4">{dispatch.description}</p>
-                <div className="text-xs font-mono opacity-70">
-                  float.dispatch::techcraft::{String(index + 1).padStart(2, '0')}
-                </div>
-              </div>
+              </Link>
             ))}
           </div>
+          
+          {techcraftDispatches.length === 0 && (
+            <div className="text-center py-8 text-gray-400">
+              <p className="mb-4">No TechCraft dispatches published yet.</p>
+            </div>
+          )}
           
           <div className="mt-12 text-center">
             <p className="text-lg opacity-80 mb-4">More dispatches coming soon...</p>
