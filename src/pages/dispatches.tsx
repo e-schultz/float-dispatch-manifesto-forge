@@ -1,7 +1,6 @@
 
 import React from "react";
-import FloatNavBar from "../components/FloatNavBar";
-import FloatFooter from "../components/FloatFooter";
+import MainLayout from "@/components/layouts/MainLayout";
 import DispatchCard from "../components/DispatchCard";
 import { Grid3X3 } from 'lucide-react';
 import { useDispatches } from '@/hooks/useData';
@@ -10,10 +9,8 @@ const DispatchesPage = () => {
   const dispatches = useDispatches();
   
   return (
-    <div className="min-h-screen bg-black text-white">
-      <FloatNavBar />
-      
-      <header className="w-full py-12 border-b border-gray-800">
+    <MainLayout>
+      <header className="w-full py-12 border-b border-border">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold font-mono mb-4">ALL DISPATCHES</h1>
           <p className="text-lg opacity-90 max-w-3xl">
@@ -22,7 +19,7 @@ const DispatchesPage = () => {
         </div>
       </header>
       
-      <main className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-4 py-16">
         <div className="flex items-center gap-2 mb-8">
           <Grid3X3 className="h-5 w-5" />
           <h2 className="text-2xl font-bold font-mono">Latest Dispatches</h2>
@@ -42,10 +39,8 @@ const DispatchesPage = () => {
             />
           ))}
         </div>
-      </main>
-      
-      <FloatFooter />
-    </div>
+      </div>
+    </MainLayout>
   );
 };
 

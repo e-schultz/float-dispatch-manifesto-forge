@@ -54,28 +54,28 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				// FLOAT.dispatch imprint colors
+				// FLOAT.dispatch imprint colors (HSL format)
 				techcraft: {
-					DEFAULT: "#0a1520",
-					accent: "#4A90E2",
-					light: "#8AB4F8",
-					border: "rgba(74, 144, 226, 0.3)"
+					DEFAULT: "210 100% 7%",      /* #0a1520 converted to HSL */
+					accent: "210 66% 53%",       /* #4A90E2 converted to HSL */
+					light: "210 85% 76%",        /* #8AB4F8 converted to HSL */
+					border: "210 66% 53%"        /* #4A90E2 with opacity handled by Tailwind */
 				},
 				sigil: {
-					DEFAULT: "#000000",
-					accent: "#E24A90",
-					light: "#ff6eb4", // Enhanced lighter color for better contrast
-					border: "rgba(226, 74, 144, 0.3)"
+					DEFAULT: "0 0% 0%",          /* #000000 */
+					accent: "331 66% 53%",       /* #E24A90 converted to HSL */
+					light: "331 100% 70%",       /* #ff6eb4 converted to HSL */
+					border: "331 66% 53%"        /* #E24A90 with opacity handled by Tailwind */
 				},
 				activate: {
-					DEFAULT: "#000000",
-					accent: "#00ff9f",
-					border: "rgba(0, 255, 159, 0.3)"
+					DEFAULT: "0 0% 0%",          /* #000000 */
+					accent: "162 100% 50%",      /* #00ff9f converted to HSL */
+					border: "162 100% 50%"       /* #00ff9f with opacity handled by Tailwind */
 				},
 				interface: {
-					DEFAULT: "#000000",
-					accent: "#8b00ff",
-					border: "rgba(139, 0, 255, 0.3)"
+					DEFAULT: "0 0% 0%",          /* #000000 */
+					accent: "267 100% 50%",      /* #8b00ff converted to HSL */
+					border: "267 100% 50%"       /* #8b00ff with opacity handled by Tailwind */
 				},
 				// Cyberpunk zine colors using HSL variables
 				'sigil-light': 'hsl(var(--sigil-light))',

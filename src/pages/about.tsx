@@ -1,14 +1,11 @@
 
 import React from "react";
-import FloatNavBar from "../components/FloatNavBar";
-import FloatFooter from "../components/FloatFooter";
+import MainLayout from "@/components/layouts/MainLayout";
 
 const AboutPage = () => {
   return (
-    <div className="min-h-screen bg-black text-white">
-      <FloatNavBar />
-      
-      <header className="w-full py-12 border-b border-gray-800">
+    <MainLayout>
+      <header className="w-full py-12 border-b border-border">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold font-mono mb-4">ABOUT FLOAT.DISPATCH</h1>
           <p className="text-lg opacity-90 max-w-3xl">
@@ -17,7 +14,7 @@ const AboutPage = () => {
         </div>
       </header>
       
-      <main className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-4 py-16">
         <div className="max-w-3xl mx-auto prose prose-invert">
           <p className="text-xl">
             FLOAT.DISPATCH is a publishing house and framework for exploring the theme of 'chaos made coherent' through curated collections of works across technology, philosophy, and art.
@@ -47,10 +44,8 @@ const AboutPage = () => {
             This is a placeholder page that will be expanded with more information about FLOAT.DISPATCH, its origins, and its mission.
           </p>
         </div>
-      </main>
-      
-      <FloatFooter />
-    </div>
+      </div>
+    </MainLayout>
   );
 };
 
