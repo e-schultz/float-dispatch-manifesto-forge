@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function FloatFooter() {
   return (
-    <footer className="bg-black text-white py-8 px-4 border-t border-gray-800">
+    <footer className="bg-background text-foreground py-8 px-4 border-t border-border">
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="font-mono text-sm mb-4 md:mb-0">
@@ -18,7 +18,7 @@ export default function FloatFooter() {
           </div>
         </div>
         
-        <div className="mt-8 pt-6 border-t border-gray-800 grid md:grid-cols-5 gap-6 text-sm">
+        <div className="mt-8 pt-6 border-t border-border grid md:grid-cols-5 gap-6 text-sm">
           <div>
             <h3 className="font-mono text-techcraft-accent mb-2">TECHCRAFT</h3>
             <ul className="space-y-1 opacity-80">
@@ -59,7 +59,7 @@ export default function FloatFooter() {
           </div>
         </div>
         
-        <div className="mt-8 pt-4 border-t border-gray-800 text-xs opacity-70">
+        <div className="mt-8 pt-4 border-t border-border text-xs opacity-70">
           <p>FLOAT.DISPATCH is a publishing house exploring chaos made coherent through curated collections of works across technology, philosophy, and ritual.</p>
         </div>
       </div>

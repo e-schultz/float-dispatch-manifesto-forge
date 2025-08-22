@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
-import FloatNavBar from "@/components/FloatNavBar";
-import FloatFooter from "@/components/FloatFooter";
+import ZineLayout from "@/components/layouts/ZineLayout";
 import CyberpunkHeader from "@/components/zine/CyberpunkHeader";
 import BridgeCard from "@/components/zine/BridgeCard";
 import PatternRecognition from "@/components/zine/PatternRecognition";
@@ -12,26 +11,6 @@ const HouseOfClaudeFucks = () => {
   const article = claudeFucksData;
 
   useEffect(() => {
-    // Terminal cursor effect
-    const handleMouseMove = (e: MouseEvent) => {
-      const cursor = document.createElement('div');
-      cursor.style.position = 'fixed';
-      cursor.style.left = e.clientX + 'px';
-      cursor.style.top = e.clientY + 'px';
-      cursor.style.width = '2px';
-      cursor.style.height = '20px';
-      cursor.style.background = 'hsl(var(--sigil-light))';
-      cursor.style.pointerEvents = 'none';
-      cursor.style.opacity = '0.5';
-      cursor.style.zIndex = '9999';
-      document.body.appendChild(cursor);
-      
-      setTimeout(() => {
-        cursor.style.opacity = '0';
-        setTimeout(() => cursor.remove(), 500);
-      }, 100);
-    };
-
     // Glitch text on hover
     const handleBridgeHover = (e: Event) => {
       const target = e.currentTarget as HTMLElement;
@@ -46,8 +25,6 @@ const HouseOfClaudeFucks = () => {
       }
     };
 
-    document.addEventListener('mousemove', handleMouseMove);
-    
     // Add glitch effect to bridge cards
     const bridgeCards = document.querySelectorAll('.bridge-card');
     bridgeCards.forEach(card => {
@@ -55,7 +32,6 @@ const HouseOfClaudeFucks = () => {
     });
 
     return () => {
-      document.removeEventListener('mousemove', handleMouseMove);
       bridgeCards.forEach(card => {
         card.removeEventListener('mouseenter', handleBridgeHover);
       });
@@ -63,27 +39,14 @@ const HouseOfClaudeFucks = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-black text-sigil-light font-mono cursor-crosshair relative">
-      {/* Skip link for accessibility */}
-      <a 
-        href="#main" 
-        className="skip-link absolute -top-10 left-0 bg-black text-sigil-light p-2 z-50 focus:top-0"
-      >
-        Skip to main content
-      </a>
-      
-      {/* Scanlines overlay */}
-      <div className="fixed inset-0 bg-scanlines pointer-events-none z-40" />
-      
-      <FloatNavBar />
-      
+    <ZineLayout>
       <CyberpunkHeader
         title={article.title}
         subtitle={article.subtitle}
         certification={article.certification}
       />
       
-      <main id="main" className="max-w-4xl mx-auto p-8 relative z-30">
+      <div className="max-w-4xl mx-auto p-8">
         
         {/* Introduction */}
         <p className="text-lg leading-relaxed mb-12 text-sigil-light/90">
@@ -136,16 +99,14 @@ const HouseOfClaudeFucks = () => {
           </div>
         </section>
         
-      </main>
+      </div>
       
       <CyberpunkFooter
         title={article.content.footer.title}
         subtitle={article.content.footer.subtitle}
         context={article.content.footer.context}
       />
-      
-      <FloatFooter />
-    </div>
+    </ZineLayout>
   );
 };
 

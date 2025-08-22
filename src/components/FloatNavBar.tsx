@@ -11,23 +11,18 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { useNavigation } from '@/hooks/useData';
 
 const FloatNavBar = () => {
-  const navItems = [
-    { name: "Dispatches", href: "/dispatches" },
-    { name: "Imprints", href: "/imprints" },
-    { name: "Changelog", href: "/changelog" },
-    { name: "Documentation", href: "/documentation" },
-    { name: "About", href: "/about" },
-    { name: "Contact", href: "/contact" },
-  ];
+  const navigation = useNavigation();
+  const navItems = navigation.main || [];
 
   return (
-    <nav className="border-b border-gray-800 bg-black/95 backdrop-blur supports-[backdrop-filter]:bg-black/60 sticky top-0 z-50">
+    <nav className="border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="text-xl font-bold font-mono hover:text-gray-300 transition-colors">
+          <Link to="/" className="text-xl font-bold font-mono hover:text-muted-foreground transition-colors">
             FLOAT.DISPATCH
           </Link>
 
@@ -35,11 +30,11 @@ const FloatNavBar = () => {
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <Link
-                key={item.name}
+                key={item.text}
                 to={item.href}
-                className="text-sm hover:text-gray-300 transition-colors"
+                className="text-sm hover:text-muted-foreground transition-colors"
               >
-                {item.name}
+                {item.text}
               </Link>
             ))}
           </div>
@@ -53,7 +48,7 @@ const FloatNavBar = () => {
                   <span className="sr-only">Toggle menu</span>
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="bg-black border-gray-800">
+              <SheetContent side="right" className="bg-background border-border">
                 <SheetHeader>
                   <SheetTitle className="text-left font-mono">FLOAT.DISPATCH</SheetTitle>
                   <SheetDescription className="text-left">
@@ -63,11 +58,11 @@ const FloatNavBar = () => {
                 <div className="flex flex-col space-y-4 mt-8">
                   {navItems.map((item) => (
                     <Link
-                      key={item.name}
+                      key={item.text}
                       to={item.href}
-                      className="text-lg hover:text-gray-300 transition-colors"
+                      className="text-lg hover:text-muted-foreground transition-colors"
                     >
-                      {item.name}
+                      {item.text}
                     </Link>
                   ))}
                 </div>
