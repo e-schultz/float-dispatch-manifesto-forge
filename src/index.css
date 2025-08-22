@@ -220,6 +220,13 @@
     rgba(0, 255, 0, 0.03) 20px,
     rgba(0, 255, 0, 0.03) 40px
   );
+
+  /* Shadow Walker specific colors */
+  --shadow-purple: 280 100% 10%;        /* #1a0033 */
+  --contradiction-red: 345 100% 63%;    /* #ff0044 */
+  --paradox-cyan: 174 100% 50%;         /* #00ffcc */
+  --extraction-gold: 40 100% 50%;       /* #ffaa00 */
+  --contamination-green: 127 100% 50%;  /* #00ff44 */
 }
 
 /* Terminal scanlines */
@@ -309,10 +316,56 @@
   transform: translateX(0.625rem);
 }
 
+/* Shadow Walker specific styles */
+.shadow-text {
+  animation: drift 30s infinite alternate;
+}
+
+@keyframes drift {
+  0% { transform: translateX(-100%) rotate(-45deg); }
+  100% { transform: translateX(100%) rotate(-45deg); }
+}
+
+.contradiction-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, hsl(var(--paradox-cyan)), transparent);
+  animation: scan 4s infinite;
+  opacity: 0.3;
+}
+
+@keyframes scan {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+.shadow-reveal:hover .surface {
+  opacity: 0.2;
+}
+
+.shadow-reveal:hover .depth {
+  opacity: 1;
+}
+
+.bg-repeating-shadow {
+  background: repeating-linear-gradient(
+    45deg,
+    black,
+    black 10px,
+    hsl(var(--shadow-purple)) 10px,
+    hsl(var(--shadow-purple)) 20px
+  );
+}
+
 /* Reduced motion preferences for cyberpunk effects */
 @media (prefers-reduced-motion: reduce) {
   .animate-glitch,
-  .animate-spin-slow {
+  .animate-spin-slow,
+  .shadow-text {
     animation: none !important;
   }
   

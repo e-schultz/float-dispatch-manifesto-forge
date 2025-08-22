@@ -18,6 +18,7 @@ import InterfacePoeticsIndex from "./pages/imprints/interface-poetics/index";
 import SubscribePage from "./pages/subscribe";
 import DispatchDetail from "./pages/DispatchDetail";
 import HouseOfClaudeFucks from "./pages/HouseOfClaudeFucks";
+import ShadowWalker from "./pages/ShadowWalker";
 
 const queryClient = new QueryClient();
 
@@ -47,6 +48,7 @@ function App() {
             <Route path="/imprints/spa" element={<ImprintsIndex />} />
             <Route path="/imprints/spa/:slug" element={<DispatchDetail />} />
             <Route path="/house-of-claude-fucks" element={<HouseOfClaudeFucks />} />
+            <Route path="/shadow-walker" element={<ShadowWalker />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

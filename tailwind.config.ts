@@ -82,7 +82,14 @@ export default {
 				'sigil-accent': 'hsl(var(--sigil-accent))',
 				'sigil-error': 'hsl(var(--sigil-error))',
 				'sigil-boundary': 'hsl(var(--sigil-boundary))',
-				'sigil-dim': 'hsl(var(--sigil-dim))'
+				'sigil-dim': 'hsl(var(--sigil-dim))',
+				
+				// Shadow Walker colors
+				'shadow-purple': 'hsl(var(--shadow-purple))',
+				'contradiction-red': 'hsl(var(--contradiction-red))',
+				'paradox-cyan': 'hsl(var(--paradox-cyan))',
+				'extraction-gold': 'hsl(var(--extraction-gold))',
+				'contamination-green': 'hsl(var(--contamination-green))'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
