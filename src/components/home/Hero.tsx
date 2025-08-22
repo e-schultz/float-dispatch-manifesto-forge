@@ -9,10 +9,10 @@ const Hero = () => {
   const imprints = useImprints();
   
   return (
-    <section className="relative w-full py-20 border-b border-gray-800">
+    <section className="relative w-full py-20 border-b border-border">
       <div className="container mx-auto px-4 grid gap-8 md:grid-cols-2 items-center">
         <div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-mono mb-4">
+          <h1 className="font-bold font-mono mb-4">
             {siteData.hero.title}
             <span className="text-sigil-accent">{siteData.hero.titleAccent}</span>
           </h1>
@@ -22,14 +22,14 @@ const Hero = () => {
           <div className="flex flex-wrap gap-4">
             <Link 
               to={siteData.hero.primaryCTA.link} 
-              className="inline-flex items-center gap-2 bg-white text-black px-4 py-2 rounded-md hover:bg-gray-200 transition-colors"
+              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-md hover:bg-primary/90 transition-colors"
             >
               <BookOpen className="h-4 w-4" />
               <span>{siteData.hero.primaryCTA.text}</span>
             </Link>
             <Link 
               to={siteData.hero.secondaryCTA.link} 
-              className="inline-flex items-center gap-2 border border-white px-4 py-2 rounded-md hover:bg-white/10 transition-colors"
+              className="inline-flex items-center gap-2 border border-border px-4 py-2 rounded-md hover:bg-muted/10 transition-colors"
             >
               <span>{siteData.hero.secondaryCTA.text}</span>
               <ArrowRight className="h-4 w-4" />
@@ -47,8 +47,8 @@ const Hero = () => {
               </span>
             </div>
           ))}
-          <div className="aspect-square bg-black border border-gray-800 rounded-md flex items-center justify-center">
-            <span className="text-white font-mono text-xl opacity-50">FLOAT</span>
+          <div className="aspect-square bg-background border border-border rounded-md flex items-center justify-center">
+            <span className="text-foreground font-mono text-xl opacity-50">FLOAT</span>
           </div>
         </div>
       </div>

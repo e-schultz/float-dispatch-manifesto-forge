@@ -1,51 +1,48 @@
 
 import React from "react";
-import FloatNavBar from "../components/FloatNavBar";
-import FloatFooter from "../components/FloatFooter";
+import MainLayout from "@/components/layouts/MainLayout";
+import CodeBlock from "@/components/ui/code-block";
 import { Book, Code, Palette, Zap, Settings, Users } from "lucide-react";
 
 const DocumentationPage = () => {
   return (
-    <div className="min-h-screen bg-black text-white">
-      <FloatNavBar />
-      
-      <header className="w-full py-12 border-b border-gray-800">
+    <MainLayout>
+      <header className="w-full py-12 border-b border-border">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold font-mono mb-4">DOCUMENTATION</h1>
+          <h1 className="font-bold font-mono mb-4">DOCUMENTATION</h1>
           <p className="text-lg opacity-90 max-w-3xl">
             Comprehensive guide to FLOAT.DISPATCH architecture, features, and development practices.
           </p>
         </div>
       </header>
       
-      <main className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
-          
           {/* Quick Navigation */}
-          <nav className="mb-12 p-6 bg-gray-900 rounded-lg">
+          <nav className="mb-12 p-6 bg-muted rounded-lg">
             <h2 className="text-xl font-mono mb-4">Quick Navigation</h2>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              <a href="#project-overview" className="flex items-center gap-2 text-blue-400 hover:text-blue-300">
+              <a href="#project-overview" className="flex items-center gap-2 text-primary hover:text-primary/80">
                 <Book className="h-4 w-4" />
                 Project Overview
               </a>
-              <a href="#architecture" className="flex items-center gap-2 text-blue-400 hover:text-blue-300">
+              <a href="#architecture" className="flex items-center gap-2 text-primary hover:text-primary/80">
                 <Code className="h-4 w-4" />
                 Architecture
               </a>
-              <a href="#design-system" className="flex items-center gap-2 text-blue-400 hover:text-blue-300">
+              <a href="#design-system" className="flex items-center gap-2 text-primary hover:text-primary/80">
                 <Palette className="h-4 w-4" />
                 Design System
               </a>
-              <a href="#features" className="flex items-center gap-2 text-blue-400 hover:text-blue-300">
+              <a href="#features" className="flex items-center gap-2 text-primary hover:text-primary/80">
                 <Zap className="h-4 w-4" />
                 Features
               </a>
-              <a href="#development" className="flex items-center gap-2 text-blue-400 hover:text-blue-300">
+              <a href="#development" className="flex items-center gap-2 text-primary hover:text-primary/80">
                 <Settings className="h-4 w-4" />
                 Development
               </a>
-              <a href="#contributing" className="flex items-center gap-2 text-blue-400 hover:text-blue-300">
+              <a href="#contributing" className="flex items-center gap-2 text-primary hover:text-primary/80">
                 <Users className="h-4 w-4" />
                 Contributing
               </a>
@@ -98,8 +95,12 @@ const DocumentationPage = () => {
             <h2 className="text-3xl font-mono mb-6">Architecture</h2>
             
             <h3 className="text-xl font-mono mb-4">Project Structure</h3>
-            <pre className="bg-gray-900 p-4 rounded-lg text-sm overflow-x-auto mb-6">
-              <code>{`src/
+            <CodeBlock
+              language="bash"
+              filename="Project Structure"
+              showLineNumbers={false}
+            >
+{`src/
 ├── components/           # Reusable UI components
 │   ├── ui/              # Shadcn/UI base components
 │   ├── changelog/       # Changelog functionality
@@ -110,8 +111,8 @@ const DocumentationPage = () => {
 │   └── *.tsx           # Main pages
 ├── hooks/              # Custom React hooks
 ├── lib/               # Utility functions
-└── main.tsx           # Application entry point`}</code>
-            </pre>
+└── main.tsx           # Application entry point`}
+            </CodeBlock>
 
             <h3 className="text-xl font-mono mb-4">Component Guidelines</h3>
             <ul className="space-y-2 mb-6">
@@ -192,7 +193,7 @@ const DocumentationPage = () => {
             <h2 className="text-3xl font-mono mb-6">Features</h2>
             
             <div className="grid gap-6">
-              <div className="p-6 bg-gray-900 rounded-lg">
+              <div className="p-6 bg-muted rounded-lg">
                 <h3 className="text-xl font-mono mb-3">Changelog System</h3>
                 <p className="mb-3">Interactive project changelog with completion tracking:</p>
                 <ul className="text-sm space-y-1 opacity-80">
@@ -204,7 +205,7 @@ const DocumentationPage = () => {
                 </ul>
               </div>
               
-              <div className="p-6 bg-gray-900 rounded-lg">
+              <div className="p-6 bg-muted rounded-lg">
                 <h3 className="text-xl font-mono mb-3">Multi-Imprint System</h3>
                 <p className="mb-3">Content organized into thematic containers:</p>
                 <ul className="text-sm space-y-1 opacity-80">
@@ -215,7 +216,7 @@ const DocumentationPage = () => {
                 </ul>
               </div>
               
-              <div className="p-6 bg-gray-900 rounded-lg">
+              <div className="p-6 bg-muted rounded-lg">
                 <h3 className="text-xl font-mono mb-3">Accessibility & Performance</h3>
                 <p className="mb-3">Built with web standards and best practices:</p>
                 <ul className="text-sm space-y-1 opacity-80">
@@ -234,8 +235,12 @@ const DocumentationPage = () => {
             <h2 className="text-3xl font-mono mb-6">Development</h2>
             
             <h3 className="text-xl font-mono mb-4">Getting Started</h3>
-            <pre className="bg-gray-900 p-4 rounded-lg text-sm overflow-x-auto mb-6">
-              <code>{`# Clone and setup
+            <CodeBlock
+              language="bash"
+              filename="setup.sh"
+              caption="Development setup commands"
+            >
+{`# Clone and setup
 git clone <repository-url>
 cd float-dispatch
 npm install
@@ -244,8 +249,8 @@ npm install
 npm run dev          # Start dev server
 npm run build        # Production build
 npm run preview      # Preview build
-npm run lint         # Run linting`}</code>
-            </pre>
+npm run lint         # Run linting`}
+            </CodeBlock>
 
             <h3 className="text-xl font-mono mb-4">Code Standards</h3>
             <ul className="space-y-2 mb-6">
@@ -296,10 +301,8 @@ npm run lint         # Run linting`}</code>
             </div>
           </section>
         </div>
-      </main>
-      
-      <FloatFooter />
-    </div>
+      </div>
+    </MainLayout>
   );
 };
 

@@ -1,8 +1,8 @@
 import React from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import ImprintHeader from "@/components/ImprintHeader";
-import FloatNavBar from "@/components/FloatNavBar";
-import FloatFooter from "@/components/FloatFooter";
+import MainLayout from "@/components/layouts/MainLayout";
+import CodeBlock from "@/components/ui/code-block";
 import { ArrowLeft, Clock, Tag, Calendar, FileText } from "lucide-react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -17,21 +17,25 @@ const DispatchDetail = () => {
   
   if (!dispatch) {
     return (
-      <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center">
-        <h1 className="text-4xl font-mono mb-4">404</h1>
-        <p className="text-xl mb-8">Dispatch not found</p>
-        <Link to="/dispatches" className="text-blue-400 hover:underline">
-          View all dispatches
-        </Link>
-      </div>
+      <MainLayout>
+        <div className="min-h-screen flex flex-col items-center justify-center">
+          <h1 className="text-4xl font-mono mb-4">404</h1>
+          <p className="text-xl mb-8">Dispatch not found</p>
+          <Link to="/dispatches" className="text-primary hover:underline">
+            View all dispatches
+          </Link>
+        </div>
+      </MainLayout>
     );
   }
 
   if (!imprint) {
     return (
-      <div className="min-h-screen bg-black text-white flex items-center justify-center">
-        <p>Imprint configuration error</p>
-      </div>
+      <MainLayout>
+        <div className="min-h-screen flex items-center justify-center">
+          <p>Imprint configuration error</p>
+        </div>
+      </MainLayout>
     );
   }
   
@@ -43,9 +47,7 @@ const DispatchDetail = () => {
   );
   
   return (
-    <div className="min-h-screen bg-black text-white">
-      <FloatNavBar />
-      
+    <MainLayout className="bg-background text-foreground">
       <ImprintHeader
         imprint={dispatch.imprint as "techcraft" | "activate" | "sigil-studies" | "spa" | "interface-poetics"}
         title={dispatch.title}
@@ -54,7 +56,7 @@ const DispatchDetail = () => {
         date={dispatch.date}
       />
       
-      <main className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
           {/* Back button */}
           <Button
@@ -200,25 +202,16 @@ const DispatchDetail = () => {
                     )}
                     
                     {section.code && (
-                      <Card className={`bg-black/60 border ${imprint.colors.border} mb-6`}>
-                        <CardHeader className="pb-2">
-                          <div className="flex items-center justify-between">
-                            <span className={`text-xs ${imprint.colors.accent} font-mono`}>
-                              {section.code.language}
-                            </span>
-                            <span className="text-xs text-gray-400">
-                              {section.code.caption}
-                            </span>
-                          </div>
-                        </CardHeader>
-                        <CardContent>
-                          <pre className="overflow-x-auto">
-                            <code className="text-sm text-gray-200 font-mono">
-                              {section.code.content}
-                            </code>
-                          </pre>
-                        </CardContent>
-                      </Card>
+                      <div className="mb-6">
+                        <CodeBlock
+                          language={section.code.language || 'text'}
+                          caption={section.code.caption}
+                          showLineNumbers={true}
+                          copyable={true}
+                        >
+                          {section.code.content}
+                        </CodeBlock>
+                      </div>
                     )}
                     
                     {section.steps && (
@@ -354,10 +347,8 @@ const DispatchDetail = () => {
             )}
           </div>
         </div>
-      </main>
-      
-      <FloatFooter />
-    </div>
+      </div>
+    </MainLayout>
   );
 };
 

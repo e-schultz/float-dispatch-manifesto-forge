@@ -74,16 +74,96 @@
 
   body {
     @apply bg-background text-foreground;
+    line-height: 1.6;
   }
 
-  /* Use monospace and system-ui fonts */
+  /* Enhanced typography system */
   html {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     @apply antialiased;
   }
 
+  /* Improved heading hierarchy */
   h1, h2, h3, h4, h5, h6 {
     @apply font-mono;
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl font-bold;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl font-semibold;
+  }
+
+  h4 {
+    @apply text-xl md:text-2xl font-semibold;
+  }
+
+  h5 {
+    @apply text-lg md:text-xl font-medium;
+  }
+
+  h6 {
+    @apply text-base md:text-lg font-medium;
+  }
+
+  /* Enhanced text elements */
+  p {
+    @apply leading-relaxed;
+  }
+
+  code {
+    @apply font-mono text-sm bg-muted px-1.5 py-0.5 rounded border;
+  }
+
+  pre {
+    @apply font-mono text-sm bg-muted p-4 rounded border overflow-x-auto;
+  }
+
+  pre code {
+    @apply bg-transparent p-0 border-0;
+  }
+
+  blockquote {
+    @apply border-l-4 border-accent pl-4 italic text-muted-foreground;
+  }
+
+  /* Lists */
+  ul, ol {
+    @apply space-y-1;
+  }
+
+  ul {
+    @apply list-disc list-inside;
+  }
+
+  ol {
+    @apply list-decimal list-inside;
+  }
+
+  /* Links */
+  a {
+    @apply text-primary hover:text-primary/80 transition-colors underline-offset-4 hover:underline;
+  }
+
+  /* Tables */
+  table {
+    @apply w-full border-collapse border-spacing-0;
+  }
+
+  th, td {
+    @apply border border-border px-4 py-2 text-left;
+  }
+
+  th {
+    @apply bg-muted font-semibold;
   }
 }
 
