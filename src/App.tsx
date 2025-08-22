@@ -17,6 +17,7 @@ import TechCraftIndex from "./pages/imprints/techcraft/index";
 import InterfacePoeticsIndex from "./pages/imprints/interface-poetics/index";
 import SubscribePage from "./pages/subscribe";
 import DispatchDetail from "./pages/DispatchDetail";
+import HouseOfClaudeFucks from "./pages/HouseOfClaudeFucks";
 
 const queryClient = new QueryClient();
 
@@ -45,6 +46,7 @@ function App() {
             <Route path="/imprints/sigil-studies/:slug" element={<DispatchDetail />} />
             <Route path="/imprints/spa" element={<ImprintsIndex />} />
             <Route path="/imprints/spa/:slug" element={<DispatchDetail />} />
+            <Route path="/house-of-claude-fucks" element={<HouseOfClaudeFucks />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

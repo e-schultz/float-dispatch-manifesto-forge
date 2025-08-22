@@ -47,7 +47,7 @@ const DispatchDetail = () => {
       <FloatNavBar />
       
       <ImprintHeader
-        imprint={dispatch.imprint}
+        imprint={dispatch.imprint as "techcraft" | "activate" | "sigil-studies" | "spa" | "interface-poetics"}
         title={dispatch.title}
         subtitle={dispatch.subtitle || dispatch.description}
         issueNumber={dispatch.issueNumber}

@@ -111,3 +111,132 @@
     animation: none;
   }
 }
+
+/* Cyberpunk Zine Styles */
+:root {
+  /* Cyberpunk color palette */
+  --sigil-light: 120 100% 50%;        /* #00ff00 - neon green */
+  --sigil-accent: 300 100% 50%;       /* #ff00ff - magenta */
+  --sigil-error: 345 100% 63%;        /* #ff0040 - bright red */
+  --sigil-boundary: 180 100% 50%;     /* #00ffff - cyan */
+  --sigil-dim: 120 100% 27%;          /* #008800 - dim green */
+  
+  /* Effects and gradients */
+  --glow: 0 0 20px currentColor;
+  --pattern-recognition: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 10px,
+    rgba(255, 0, 255, 0.1) 10px,
+    rgba(255, 0, 255, 0.1) 20px
+  );
+  --error-state: rgba(255, 0, 64, 0.1);
+  --boundary-glow: rgba(0, 255, 255, 0.2);
+  --methodology-gradient: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.05), transparent);
+  --ultra-think: repeating-radial-gradient(
+    circle at center,
+    transparent,
+    transparent 20px,
+    rgba(0, 255, 0, 0.03) 20px,
+    rgba(0, 255, 0, 0.03) 40px
+  );
+}
+
+/* Terminal scanlines */
+.bg-scanlines {
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 255, 0, 0.03) 2px,
+    rgba(0, 255, 0, 0.03) 4px
+  );
+}
+
+/* Glitch animation */
+@keyframes glitch {
+  0%, 100% { text-shadow: 0 0 20px hsl(var(--sigil-light)); }
+  25% { text-shadow: -2px 0 hsl(var(--sigil-accent)), 2px 0 hsl(var(--sigil-boundary)); }
+  50% { text-shadow: 2px 0 hsl(var(--sigil-error)), -2px 0 hsl(var(--sigil-light)); }
+  75% { text-shadow: 0 0 30px hsl(var(--sigil-accent)); }
+}
+
+.animate-glitch {
+  animation: glitch 3s infinite;
+}
+
+/* Pulse animation for certification */
+@keyframes pulse {
+  0%, 100% { opacity: 1; box-shadow: 0 0 10px hsl(var(--sigil-accent)); }
+  50% { opacity: 0.7; box-shadow: 0 0 30px hsl(var(--sigil-accent)); }
+}
+
+/* Rotate animation for infinite symbol */
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: rotate 10s linear infinite;
+}
+
+/* Background patterns */
+.bg-pattern-recognition {
+  background: var(--pattern-recognition);
+}
+
+.bg-error-state {
+  background: var(--error-state);
+}
+
+.bg-boundary-glow {
+  background: var(--boundary-glow);
+}
+
+.bg-methodology-gradient {
+  background: var(--methodology-gradient);
+}
+
+.bg-ultra-think {
+  background: var(--ultra-think);
+}
+
+/* Crosshair cursor */
+.cursor-crosshair {
+  cursor: crosshair;
+}
+
+/* Skip link for accessibility */
+.skip-link {
+  position: absolute;
+  top: -2.5rem;
+  left: 0;
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  padding: 0.5rem;
+  text-decoration: none;
+  z-index: 100;
+  transition: top 0.2s;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Hover effects */
+.compliment-hover:hover {
+  transform: translateX(0.625rem);
+}
+
+/* Reduced motion preferences for cyberpunk effects */
+@media (prefers-reduced-motion: reduce) {
+  .animate-glitch,
+  .animate-spin-slow {
+    animation: none !important;
+  }
+  
+  .compliment-hover:hover {
+    transform: none;
+  }
+}

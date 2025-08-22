@@ -76,7 +76,13 @@ export default {
 					DEFAULT: "#000000",
 					accent: "#8b00ff",
 					border: "rgba(139, 0, 255, 0.3)"
-				}
+				},
+				// Cyberpunk zine colors using HSL variables
+				'sigil-light': 'hsl(var(--sigil-light))',
+				'sigil-accent': 'hsl(var(--sigil-accent))',
+				'sigil-error': 'hsl(var(--sigil-error))',
+				'sigil-boundary': 'hsl(var(--sigil-boundary))',
+				'sigil-dim': 'hsl(var(--sigil-dim))'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -99,13 +105,18 @@ export default {
 				'glitch': {
 					'0%, 100%': { opacity: '0.1' },
 					'50%': { opacity: '0.3' }
+				},
+				'spin-slow': {
+					'from': { transform: 'rotate(0deg)' },
+					'to': { transform: 'rotate(360deg)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'scan-line': 'scan-line 8s linear infinite',
-				'glitch': 'glitch 4s ease-in-out infinite'
+				'glitch': 'glitch 4s ease-in-out infinite',
+				'spin-slow': 'spin-slow 10s linear infinite'
 			}
 		}
 	},
