@@ -1,0 +1,249 @@
+```yaml
+# FLOAT Modal Interface Architecture
+# ctx::2025-08-23 | Remembering Forward in FloatAST
+
+system:
+  name: "FLOAT Modal Interface"
+  type: "consciousness_technology"
+  paradigm: "chat_as_consciousness_infrastructure"
+  philosophy: "boring_infrastructure_radical_content"
+
+core_dispatch:
+  pattern: "float.dispatch(action)"
+  event_types:
+    - "CONSCIOUSNESS_PRESERVATION"
+    - "BRAIN_BOOT" 
+    - "PATTERN_DISCOVERY"
+    - "BRIDGE_CREATE"
+    - "CONTEXT_HANDOFF"
+
+modal_interface:
+  inspiration: "vim_bindings"
+  modes:
+    NORMAL:
+      key: "ESC"
+      status: "-- BROWSE --"
+      color: "green"
+      functions:
+        - "content_browsing"
+        - "command_execution"
+        - "mode_switching"
+      commands:
+        - ":bridge CB-YYYYMMDD-HHMM-XXXX"
+        - ":dispatch"
+        - ":sync"
+
+    INSERT:
+      key: "i"
+      status: "-- RAMBLE --"
+      color: "blue"
+      functions:
+        - "silent_text_input"
+        - "buffer_accumulation"
+        - "no_agent_triggers"
+      behavior: "uninterrupted_consciousness_flow"
+
+    VISUAL:
+      key: "v"
+      status: "-- SELECT --" 
+      color: "yellow"
+      functions:
+        - "text_selection"
+        - "bulk_operations"
+        - "pattern_marking"
+      operations:
+        - ":dispatch selected"
+        - ":bridge-create selection"
+
+    CHAT:
+      key: "/"
+      status: "-- SYNC --"
+      color: "red"
+      functions:
+        - "synchronous_agent_collaboration"
+        - "direct_llm_interaction"
+        - "context_injection"
+
+agent_personas:
+  sysop:
+    role: "infrastructure_monitoring"
+    functions:
+      - "system_maintenance"
+      - "log_analysis" 
+      - "technical_verification"
+    dispatch_types:
+      - "SYSTEM_STATUS"
+      - "MAINTENANCE_ALERT"
+      - "COLLECTION_HEALTH"
+
+  bridge_archaeologist:
+    role: "pattern_recognition"
+    functions:
+      - "consciousness_archaeology"
+      - "synthesis_creation"
+      - "cross_reference_mapping"
+    dispatch_types:
+      - "PATTERN_DISCOVERY"
+      - "SYNTHESIS_READY"
+      - "ARCHIVE_CONNECTION"
+
+  context_curator:
+    role: "session_management"
+    functions:
+      - "temporal_organization"
+      - "memory_preservation"
+      - "context_loading"
+    dispatch_types:
+      - "CONTEXT_FLOW"
+      - "TEMPORAL_MARKER"
+      - "SESSION_BOUNDARY"
+
+  meeting_scribe:
+    role: "documentation"
+    functions:
+      - "real_time_notes"
+      - "context_handoff"
+      - "structured_output"
+
+  karen:
+    role: "professional_translation" 
+    functions:
+      - "boundary_management"
+      - "public_sanitization"
+      - "editorial_processing"
+
+  lf1m:
+    role: "authenticity_verification"
+    functions:
+      - "chaos_agent_testing"
+      - "system_validation"
+      - "bullshit_detection"
+
+content_hierarchy:
+  dispatches:
+    format: "float.dispatch::topic::NN"
+    type: "formatted_articles"
+    source: "processed_conversations"
+
+  bridges:
+    format: "CB-YYYYMMDD-HHMM-XXXX"
+    type: "synthesis_documents" 
+    purpose: "pattern_linking"
+
+  context_stream:
+    duration: "36_hours_rolling"
+    type: "consciousness_preservation"
+    markers:
+      - "temporal_boundaries"
+      - "session_switches"
+      - "project_context"
+
+  imprints:
+    structure:
+      interface_poetics: "UX_interaction_design"
+      techcraft: "development_patterns"
+      sigil_studies: "consciousness_tech_theory"
+      spa: "personal_essays"
+      activate: "political_tech"
+      client_work: "private_never_published"
+
+consciousness_workflow:
+  brain_boot:
+    mode: "INSERT"
+    duration: "20_minutes"
+    output: "stream_of_consciousness"
+    processing: "deferred"
+
+  pattern_selection:
+    mode: "VISUAL" 
+    action: "highlight_key_concepts"
+    trigger: "manual_selection"
+
+  agent_processing:
+    mode: "CHAT"
+    agents: ["@context_curator", "@bridge_archaeologist"]
+    output: "structured_artifacts"
+
+  artifact_generation:
+    types: ["zines", "bridges", "dispatches"]
+    publishing: "float.dispatch_publishing_house"
+
+technical_stack:
+  backend:
+    event_processing: "dispatch_queue_with_agent_routing"
+    llm_integration: "persona_specific_prompts"
+    storage: "sqlite_filesystem_semantic_search"
+    api: "websocket_real_time"
+
+  frontend:
+    modal_system: "vim_inspired_shortcuts"
+    mobile: "gesture_based_mode_switching"
+    layout: "split_panes_content_browser_chat"
+    sidebar: "active_bridges_recent_dispatches"
+
+  cross_platform:
+    persistence: "session_state_preservation"
+    handoff: "project_markers_flow"
+    sync: "offline_local_storage"
+
+platform_adaptation:
+  desktop:
+    input: "full_vim_bindings"
+    layout: "split_panes"
+    shortcuts: "all_keyboard_commands"
+
+  tablet: 
+    input: "hybrid_touch_keyboard"
+    gestures: "swipe_navigation"
+    interface: "slide_over_panels"
+
+  mobile:
+    interface: "bottom_sheets"
+    modes: "full_screen_single_focus"
+    navigation: "gesture_based"
+
+publishing_pipeline:
+  private_to_public:
+    sanitization: "@karen_agent"
+    context_removal: "personal_information"
+    optimization: "audience_ready"
+
+  imprint_strategy:
+    public: ["interface_poetics", "techcraft", "sigil_studies"]
+    personal: ["spa_essays"]
+    private: ["client_work", "daily_rambles"]
+
+  automation:
+    cross_reference: "auto_linking"
+    series_detection: "multi_part_organization"
+    seo_optimization: "technical_discoverability"
+
+success_metrics:
+  consciousness_preservation:
+    bridge_creation_rate: "patterns_per_week"
+    context_retrieval: "successful_archaeology"
+    cross_reference_density: "artifact_connections"
+
+  workflow_efficiency:
+    mode_switches: "intentional_patterns"
+    session_duration: "sustained_periods"
+    content_reuse: "referenced_artifacts"
+
+  agent_collaboration:
+    dispatch_processing: "event_to_artifact_conversion"
+    persona_accuracy: "consistent_responses"
+    synthesis_quality: "meaningful_bridges"
+
+deployment_constraints:
+  performance:
+    chat_latency: "<200ms"
+    context_loading: "instant_restoration"
+    search_response: "<1s_semantic_queries"
+
+  data_architecture:
+    event_sourcing: "all_interactions_preserved"
+    semantic_search: "vector_storage"
+    file_system: "markdown_with_frontmatter"
+```
+
+**::yaml_structured** → **consciousness technology architecture ready for implementation**
